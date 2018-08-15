@@ -37,7 +37,7 @@
 		<option value="helpdesk">Helpdesk Software</option>
 		<option value="remote">Remote Support and Access</option>
 		<option value="recruit">Recruitment Software</option>
-		<option value="other">Other</option>    
+		<option value="other">Other</option>
 	</select>
 <!---END OF CATEGORIES-->
 
@@ -51,7 +51,7 @@
 		<option value="sugar">Sugar CRM</option>
 		<option value="vtiger">Vtiger</option>
 		<option value="freshsales">Freshsales</option>
-		<option value="other">Other</option>    
+		<option value="other">Other</option>
 	</select>
 <!--- END OF CRM COMPETITORS-->
 </div>
@@ -76,7 +76,7 @@
 		<option value="formidable">Formidable</option>
 		<option value="wpforms">wpforms</option>
 		<option value="formkeep">FormKeep</option>
-		<option value="other">Other</option>    
+		<option value="other">Other</option>
 	</select>
 <!--- END OF ONLINE FORM COMPETITORS-->
 </div>
@@ -90,7 +90,7 @@
 		<option value="docusign">DocuSign</option>
 		<option value="rightsig">RightSignature</option>
 		<option value="sertifi">Sertifi</option>
-		<option value="other">Other</option>    
+		<option value="other">Other</option>
 	</select>
 <!--- END OF DIG SIG COMPETITORS-->
 </div>
@@ -337,22 +337,16 @@
 <script>
 	$( document ).ready(function() {
 		var cat = $("#category option:selected").val();
-
 		var crm = $("#crm_choice option:selected").val();
-
 		var all = crm.add;
-
-		cat.change(function(){ /* When you pick a new category */						
+		cat.change(function(){ /* When you pick a new category */
 			all.addClass('hidden');
-
 			if(cat == 'crm')
 			{
 				crm.removeClass('hidden');
 			}
-		}
-	}
+		});
+	});
 </script>
-
-
 </body>
 </html>
