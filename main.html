@@ -1,16 +1,15 @@
-#This is the primary HTML document 
-<!---matt~will move my zoho portion (right side) to here later; working on another html in Xurtel branch -->
 <!DOCTYPE html>
 <html>
+<head>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
 <body>
-  
-<h2>The select Element</h2>
-<p>The select element defines a drop-down list:</p>
 
-<form action="/">
+<form id ="calc" action=".">
 
 <!---CATEGORIES-->
- 	<select name="category">
+ 	<select name="category" required>
+ 		<option value="" disabled="disabled" selected="selected"> Choose a Category </option>
 		<option value="crm">CRM</option>
 		<option value="online">Online Forms</option>
 		<option value="sig">Digital Signature</option>
@@ -42,9 +41,317 @@
 	</select>
 <!---END OF CATEGORIES-->
 
+<div class="hidden">
+<!--CRM COMPETITORS-->
+	<select name="crm_choice">
+		<option value="salesforce">Salesforce</option>
+		<option value="microsoft">Microsoft</option>
+		<option value="hubspot">Hubspot</option>
+		<option value="pipedrive">Pipedrive</option>
+		<option value="sugar">Sugar CRM</option>
+		<option value="vtiger">Vtiger</option>
+		<option value="freshsales">Freshsales</option>
+		<option value="other">Other</option>    
+	</select>
+<!--- END OF CRM COMPETITORS-->
+</div>
 
+
+<div class="hidden">
+<!--ONLINE FORM COMPETITORS-->
+	<select name="online_form_choice">
+		<option value="google">Google Forms</option>
+		<option value="wufoo">Wufoo</option>
+		<option value="jotform">JotForm</option>
+		<option value="airtable">Airtable</option>
+		<option value="formstack">Formstack</option>
+		<option value="typeform">Typeform</option>
+		<option value="paperform">Paperform</option>
+		<option value="formsite">Formsite</option>
+		<option value="123form">123 Form Builder</option>
+		<option value="cognito">Cognito Forms</option>
+		<option value="formbakery">FORMBAKERY</option>
+		<option value="gravity">Gravity Forms</option>
+		<option value="ninja">Ninja Forms</option>
+		<option value="formidable">Formidable</option>
+		<option value="wpforms">wpforms</option>
+		<option value="formkeep">FormKeep</option>
+		<option value="other">Other</option>    
+	</select>
+<!--- END OF ONLINE FORM COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!--DIG SIG COMPETITORS-->
+	<select name="sig_choice">
+		<option value="signrequest">SignRequest</option>
+		<option value="pandadoc">PandaDoc</option>
+		<option value="adobe">Adobe Sign</option>
+		<option value="docusign">DocuSign</option>
+		<option value="rightsig">RightSignature</option>
+		<option value="sertifi">Sertifi</option>
+		<option value="other">Other</option>    
+	</select>
+<!--- END OF DIG SIG COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---SOCIAL MEDIA COMPETITORS-->
+	<select name="social_choice">
+		<option value="hootsuite">Hootsuite</option>
+		<option value="buffer">Buffer</option>
+		<option value="friends">Friends + Me</option>
+		<option value="social_pilot">Social Pilot</option>
+		<option value="sprout">Sprout Social</option>
+		<option value="eclincher">eClincher</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF SOCIAL MEDIA COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---WEB ENGAGEMENT COMPETITORS-->
+	<select name="web_engagement_choice">
+		<option value="livechat">LiveChat</option>
+		<option value="zendesk">Zendesk Chat</option>
+		<option value="whos_on">Whos On.Location</option>
+		<option value="pure_chat">Pure Chat</option>
+		<option value="olark">Olark</option>
+		<option value="intercom">Intercom</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF WEB ENGAGEMENT COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---SURVEY COMPETITORS-->
+	<select name="survey_choice">
+		<option value="survey_gizmo">Survey Gizmo</option>
+		<option value="checkbox">Checkbox Survey</option>
+		<option value="survey_monkey">Survey Monkey</option>
+		<option value="getfeedback">getfeedback</option>
+		<option value="esurveypro">eSurveyPro</option>
+		<option value="sogosurvey">SoGoSurvey</option>
+		<option value="survey_legend">Survey Legend</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF SURVEY COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---EMAIL MARKETING COMPETITORS-->
+	<select name="email_marketing">
+		<option value="mail_chimp">Mail Chimp</option>
+		<option value="constant_contact">Constant Contact (Email Plus)</option>
+		<option value="active_campaign">Active Campaign Lite</option>
+		<option value="benchmark">Benchmark</option>
+		<option value="campaigner">Campaigner</option>
+		<option value="campaign_monitor">Campaign Monitor (Unlimited)</option>
+		<option value="get_response">Get Response</option>
+		<option value="icontact">iContact</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF EMAIL MARKETING COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---WEB BUILDER COMPETITORS-->
+	<select name="web_builder">
+		<option value="wix">Wix</option>
+		<option value="squarespace">Squarespace</option>
+		<option value="weebly">Weebly</option>
+		<option value="simvoly">Simvoly</option>
+		<option value="strikingly">Strikingly</option>
+		<option value="jimdo">Jimdo</option>
+		<option value="yola">Yola</option>
+		<option value="godaddy">Go Daddy</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF WEB BUILDER COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---WEB OPTIMIZATION COMPETITORS-->
+	<select name="web_opt_choice">
+		<option value="crazy_egg">Crazy Egg</option>
+		<option value="vwo">VWO</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF WEB OPTIMIZATION COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---ACCOUNTING SOFTWARE COMPETITORS-->
+	<select name="accounting">
+		<option value="quickbooks">Quickbooks</option>
+		<option value="freshbooks">FreshBooks</option>
+		<option value="xero">Xero</option>
+		<option value="sage_one">Sage One</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF ACCOUNTING SOFTWARE COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---INVENTORY MANAGEMENT COMPETITORS-->
+	<select name="inventory">
+		<option value="veeqo">Veeqo</option>
+		<option value="unleashed">Unleashed</option>
+		<option value="tradegecko">TradeGecko</option>
+		<option value="inflow">inFlow</option>
+		<option value="stitch">Stitch Labs</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF INVENTORY MANAGEMENT COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---INVOICING SOFTWARE COMPETITORS-->
+	<select name="invoice">
+		<option value="freshbooks">FreshBooks</option>
+		<option value="invoicely">Invoicely</option>
+		<option value="invoicera">Invoicera</option>
+		<option value="invoice2go">Invoice2go</option>
+		<option value="hiveage">Hiveage</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF INVOICING SOFTWARE COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---SUBSCRIPTION MANAGEMENT COMPETITORS-->
+	<select name="sub_management">
+		<option value="changebee">Changebee</option>
+		<option value="cratejoy">cratejoy</option>
+		<option value="braintree">Braintree</option>
+		<option value="chargify">Chargify</option>
+		<option value="fastspring">Fastspring</option>
+		<option value="stripe">Stripe</option>
+		<option value="zuora">Zuora</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF SUBSCRIPTION MANAGEMENT COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---EXPENSE MANAGEMENT COMPETITORS-->
+	<select name="expense_management">
+		<option value="fyle">Fyle</option>
+		<option value="ceretify">Ceretify</option>
+		<option value="sap">SAP Concur</option>
+		<option value="expensify">Expensify</option>
+		<option value="itemize">Itemize</option>
+		<option value="rydoo">Rydoo</option>
+		<option value="abacus">Abacus</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF EXPENSE MANAGEMENT COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---PAYMENT GATEWAY COMPETITORS-->
+	<select name="payment_gateway">
+		<option value="stripe">Stripe</option>
+		<option value="2checkout">2checkout</option>
+		<option value="authorize">Authorize.net</option>
+		<option value="payza">Payza</option>
+		<option value="wepay">WePay</option>
+		<option value="paypal">Paypal</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF PAYMENT GATEWAY COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---EVENT MANAGEMENT COMPETITORS-->
+	<select name="event_management">
+		<option value="eventbrite">Eventbrite</option>
+		<option value="brushfire">Brushfire</option>
+		<option value="eventsmart">Eventsmart</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF EVENT MANAGEMENT COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---EMAIL HOSTING COMPETITORS-->
+	<select name="email_hosting">
+		<option value="office365">Office365</option>
+		<option value="gsuite">G Suite</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF EMAIL HOSTING COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---CHAT COMPETITORS-->
+	<select name="chat">
+		<option value="slack">Slack</option>
+		<option value="flock">Flock</option>
+		<option value="jandi">Jandi</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF CHAT COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---PROJECT MANAGEMENT COMPETITORS-->
+	<select name="project_management">
+		<option value="asana">Asana</option>
+		<option value="atlassian">Atlassian Jira</option>
+		<option value="basecamp">Basecamp</option>
+		<option value="clarizen">Clarizen</option>
+		<option value="microsoft">Microsoft Project</option>
+		<option value="mavenlink">Mavenlink</option>
+		<option value="teamwork">Teamwork Projects</option>
+		<option value="liquid_planner">Liquid Planner</option>
+		<option value="wrike">Wrike</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF PROJECT MANAGEMENT COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!---BUG TRACKING COMPETITORS-->
+	<select name="bug_tracking">
+		<option value="instabug">Instabug</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF BUG TRACKING COMPETITORS-->
+</div>
+
+<div class="hidden">
+<!--- INTERNAL SOCIAL NETWORK COMPETITORS-->
+	<select name="internal_social">
+		<option value="jive">Jive</option>
+		<option value="yammer">Yammer</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF INTERNAL SOCIAL NETWORK COMPETITORS-->
+</div>
+
+<br><br>
 	<input type="submit">
 </form>
+
+<script>
+	$( document ).ready(function() {
+		var cat = $("#category option:selected").val();
+
+		var crm = $("#crm_choice option:selected").val();
+
+		var all = crm.add;
+
+		cat.change(function(){ /* When you pick a new category */						
+			all.addClass('hidden');
+
+			if(cat == 'crm')
+			{
+				crm.removeClass('hidden');
+			}
+		}
+	}
+</script>
 
 
 </body>
