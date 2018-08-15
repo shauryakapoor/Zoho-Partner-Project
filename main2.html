@@ -2,11 +2,12 @@
 	<head>
 		<link rel="stylesheet" href="style.css">
 		<script src="custom.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<form>
 			Category:
-			<select id="category">	
+			<select id="category" onchange ="custom.changeApplication();">	
 				<option id="crm">CRM</option>
 				<option id="forms">Online Forms</option>
 				<option id="sig">Digital Signature</option>
