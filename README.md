@@ -5,11 +5,11 @@ Team Members:
 2. Matthew Ngor 
 3. Yasmin Sayeed 
 
-Aim of the project is to develop an application which helps to compare and contract the products offered by Zoho and it's competitors. 
+Aim of the project is to develop an application which helps to compare and contrast the products offered by Zoho and its competitors. 
 
-The primary aim includes comparing the different prices rages. 
+The primary aim includes comparing the different prices ranges. 
 
-Morever, this will enable the competitors to look at the bigger picture. 
+Moreover, this will enable the competitors to look at the bigger picture. 
 
 Tools used to make the Web-application: 
 1. Javascript 
