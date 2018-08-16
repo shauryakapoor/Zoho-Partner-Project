@@ -14,24 +14,24 @@
 		<option value="crm">CRM</option>
 		<option value="online">Online Forms</option>
 		<option value="sig">Digital Signature</option>
-		<option value="socialmedia">Social Media Management</option>
-		<option value="webengagement">Website Engagement Monitoring</option>
+		<option value="social_media">Social Media Management</option>
+		<option value="web_engagement">Website Engagement Monitoring</option>
 		<option value="survey">Survey</option>
 		<option value="email">Email Marketing</option>
-		<option value="webbuilder">Website Builder</option>
-		<option value="webopt">Website Optimization</option>
+		<option value="web_builder">Website Builder</option>
+		<option value="web_opt">Website Optimization</option>
 		<option value="accounting">Accounting Software</option>
 		<option value="inventory">Inventory Management</option>
 		<option value="invoice">Invoicing Software</option>
 		<option value="subscription">Subscription Management</option>
 		<option value="expense">Expense Management</option>
-		<option value="paymentgateway">Payment Gateway</option>
+		<option value="payment_gateway">Payment Gateway</option>
 		<option value="event">Event Management</option>
-		<option value="emailhosting">Email Hosting</option>
+		<option value="email_hosting">Email Hosting</option>
 		<option value="chat">Chat</option>
 		<option value="project">Project Management</option>
-		<option value="bugtracking">Bug Tracking Software</option>
-		<option value="internalsocial">Internal Social Network</option>
+		<option value="bug_tracking">Bug Tracking Software</option>
+		<option value="internal_social">Internal Social Network</option>
 		<option value="webinar">Webinar Software</option>
 		<option value="password">Password Management</option>
 		<option value="notetaking">Note Taking</option>
@@ -310,10 +310,77 @@
 <script>
 	$( document ).ready(function() {
 		$('#crm_choice, #online_form_choice, #sig_choice, #social_choice, #payment_gateway, #survey_choice, #expense_management, #web_engagement_choice, #event_management, #project_management, #email_hosting, #chat, #bug_tracking, #internal, #inventory, #accounting, #web_opt_choice, #email_marketing, #web_builder, #sub_management, #invoice').hide();
+
 		$('#category').change(function () {
-			$('#crm_choice').hide();
+
+			$('#crm_choice, #online_form_choice, #sig_choice, #social_choice, #payment_gateway, #survey_choice, #expense_management, #web_engagement_choice, #event_management, #project_management, #email_hosting, #chat, #bug_tracking, #internal, #inventory, #accounting, #web_opt_choice, #email_marketing, #web_builder, #sub_management, #invoice').hide();
+
         	if ($('#category').val() == "crm") {
             	$('#crm_choice').show();
+        	} 
+
+    		else if ($('#category').val() == "online") {
+            	$('#online_form_choice').show();
+        	} 
+
+        	else if ($('#category').val() == "sig") {
+            	$('#sig_choice').show();
+        	} 
+
+        	else if ($('#category').val() == "social_media") {
+            	$('#social_choice').show();
+        	} 
+
+        	else if ($('#category').val() == "web_engagement") {
+            	$('#web_engagement_choice').show();
+        	} 
+        	else if ($('#category').val() == "survey") {
+            	$('#survey_choice').show();
+        	} 
+        	else if ($('#category').val() == "email") {
+            	$('#email_marketing').show();
+        	} 
+        	else if ($('#category').val() == "web_builder") {
+            	$('#web_builder').show();
+        	} 
+        	else if ($('#category').val() == "web_opt") {
+            	$('#web_opt_choice').show();
+        	}
+     		else if ($('#category').val() == "accounting") {
+            	$('#accounting').show();
+        	} 
+        	else if ($('#category').val() == "inventory") {
+            	$('#inventory').show();
+        	} 
+        	else if ($('#category').val() == "invoice") {
+            	$('#invoice').show();
+        	}  
+        	else if ($('#category').val() == "subscription") {
+            	$('#sub_management').show();
+        	} 
+        	else if ($('#category').val() == "expense") {
+            	$('#expense_management').show();
+        	} 
+        	else if ($('#category').val() == "payment_gateway") {
+            	$('#payment_gateway').show();
+        	} 
+        	else if ($('#category').val() == "event") {
+            	$('#event_management').show();
+        	} 
+        	else if ($('#category').val() == "email_hosting") {
+            	$('#email_hosting').show();
+        	} 
+        	else if ($('#category').val() == "chat") {
+            	$('#chat').show();
+        	} 
+        	else if ($('#category').val() == "project") {
+            	$('#project_management').show();
+        	} 
+        	else if ($('#category').val() == "bug_tracking") {
+            	$('#bug_tracking').show();
+        	} 
+        	else if ($('#category').val() == "internal_social") {
+            	$('#internal').show();
         	} 
     	});
 	});
