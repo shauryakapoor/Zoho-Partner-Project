@@ -2,27 +2,38 @@ custom = function() {};
 
 custom.rowTotal = function(){
 	var string = document.getElementById("pricing").value;
-	//console.log(string);
-	/*var string2 = document.getElementById(string).textContent;
-	console.log(string2);
-	var string2 = document.getElementById(string).value;
-	console.log(string2);*/
-
-	//https://stackoverflow.com/questions/10003683/javascript-get-number-from-string
-	var num = string.match(/\d+/)[0];
-	var convert = parseInt(num);
-	//console.log(convert);
-
-	numEmployees = document.getElementById("numEmp").value;
-	//console.log(numEmployees);
-
-	//Only calculate when at least 1 employee is inputted
-	if (numEmployees > 0){
-		document.getElementById("total").innerHTML = convert * numEmployees;
+	if (string === "Free"){
+		document.getElementById("total").innerHTML = "FREE!!!";
 	}
+	//Edge cases: decimals, after $, rounding floating-points
 	else{
-		alert("==== Please Enter a Number Greater Than 0 ====")
-	}
+		//stackoverflow.com/questions/26706724/extract-number-with-decimals-in-string-javascript
+		//stackoverflow.com/questions/38110419/is-there-a-difference-between-d-and-d
+		//var num = string.match(/[\d\.]+/g)[0];
+
+		//stackoverflow.com/questions/24614758/regex-to-grab-only-the-digits-after-a-dollar-sign
+		//var num = string.match(/\$(\d+)/)[1];
+
+		//Official regex
+		//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+		var num = string.match(/\$(\d+)\.\d+/)[0];
+
+		console.log(num);
+		var convert = num.substring(1, num.length);
+		console.log(convert);
+
+		numEmployees = document.getElementById("numEmp").value;
+		//console.log(numEmployees);
+
+		//Only calculate when at least 1 employee is inputted
+		if (numEmployees > 0){
+			//round to two decimal places, if needed
+			document.getElementById("total").innerHTML = "$" + Math.round((convert * numEmployees) * 100) / 100;
+		}
+		else{
+			alert("==== Please Enter a Number Greater Than 0 ====")
+		}
+	}	
 }
 
 custom.changeApplication = function(){
