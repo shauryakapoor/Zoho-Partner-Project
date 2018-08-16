@@ -1,37 +1,37 @@
-#This is the primary HTML document 
-<!---matt~will move my zoho portion (right side) to here later; working on another html in Xurtel branch -->
 <!DOCTYPE html>
 <html>
+<head>
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
 <body>
-  
-<h2>The select Element</h2>
-<p>The select element defines a drop-down list:</p>
 
-<form action="/">
+<form id ="calc" action=".">
 
 <!---CATEGORIES-->
- 	<select name="category">
+ 	<select id="category" required>
+ 		<option value="" disabled="disabled" selected="selected"> Choose a Category </option>
 		<option value="crm">CRM</option>
 		<option value="online">Online Forms</option>
 		<option value="sig">Digital Signature</option>
-		<option value="socialmedia">Social Media Management</option>
-		<option value="webengagement">Website Engagement Monitoring</option>
+		<option value="social_media">Social Media Management</option>
+		<option value="web_engagement">Website Engagement Monitoring</option>
 		<option value="survey">Survey</option>
 		<option value="email">Email Marketing</option>
-		<option value="webbuilder">Website Builder</option>
-		<option value="webopt">Website Optimization</option>
+		<option value="web_builder">Website Builder</option>
+		<option value="web_opt">Website Optimization</option>
 		<option value="accounting">Accounting Software</option>
 		<option value="inventory">Inventory Management</option>
 		<option value="invoice">Invoicing Software</option>
 		<option value="subscription">Subscription Management</option>
 		<option value="expense">Expense Management</option>
-		<option value="paymentgateway">Payment Gateway</option>
+		<option value="payment_gateway">Payment Gateway</option>
 		<option value="event">Event Management</option>
-		<option value="emailhosting">Email Hosting</option>
+		<option value="email_hosting">Email Hosting</option>
 		<option value="chat">Chat</option>
 		<option value="project">Project Management</option>
-		<option value="bugtracking">Bug Tracking Software</option>
-		<option value="internalsocial">Internal Social Network</option>
+		<option value="bug_tracking">Bug Tracking Software</option>
+		<option value="internal_social">Internal Social Network</option>
 		<option value="webinar">Webinar Software</option>
 		<option value="password">Password Management</option>
 		<option value="notetaking">Note Taking</option>
@@ -42,9 +42,494 @@
 	</select>
 <!---END OF CATEGORIES-->
 
+<!--CRM COMPETITORS-->
+	<select id="crm_choice">
+		<option value="salesforce">Salesforce</option>
+		<option value="microsoft">Microsoft</option>
+		<option value="hubspot">Hubspot</option>
+		<option value="pipedrive">Pipedrive</option>
+		<option value="sugar">Sugar CRM</option>
+		<option value="vtiger">Vtiger</option>
+		<option value="freshsales">Freshsales</option>
+		<option value="other">Other</option>    
+	</select>
+<!--- END OF CRM COMPETITORS-->
 
+
+<!--ONLINE FORM COMPETITORS-->
+	<select id="online_form_choice">
+		<option value="google">Google Forms</option>
+		<option value="wufoo">Wufoo</option>
+		<option value="jotform">JotForm</option>
+		<option value="airtable">Airtable</option>
+		<option value="formstack">Formstack</option>
+		<option value="typeform">Typeform</option>
+		<option value="paperform">Paperform</option>
+		<option value="formsite">Formsite</option>
+		<option value="123form">123 Form Builder</option>
+		<option value="cognito">Cognito Forms</option>
+		<option value="formbakery">FORMBAKERY</option>
+		<option value="gravity">Gravity Forms</option>
+		<option value="ninja">Ninja Forms</option>
+		<option value="formidable">Formidable</option>
+		<option value="wpforms">wpforms</option>
+		<option value="formkeep">FormKeep</option>
+		<option value="other">Other</option>    
+	</select>
+<!--- END OF ONLINE FORM COMPETITORS-->
+
+<!--DIG SIG COMPETITORS-->
+	<select id="sig_choice">
+		<option value="signrequest">SignRequest</option>
+		<option value="pandadoc">PandaDoc</option>
+		<option value="adobe">Adobe Sign</option>
+		<option value="docusign">DocuSign</option>
+		<option value="rightsig">RightSignature</option>
+		<option value="sertifi">Sertifi</option>
+		<option value="other">Other</option>    
+	</select>
+<!--- END OF DIG SIG COMPETITORS-->
+
+<!---SOCIAL MEDIA COMPETITORS-->
+	<select id="social_choice">
+		<option value="hootsuite">Hootsuite</option>
+		<option value="buffer">Buffer</option>
+		<option value="friends">Friends + Me</option>
+		<option value="social_pilot">Social Pilot</option>
+		<option value="sprout">Sprout Social</option>
+		<option value="eclincher">eClincher</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF SOCIAL MEDIA COMPETITORS-->
+
+<!---WEB ENGAGEMENT COMPETITORS-->
+	<select id="web_engagement_choice">
+		<option value="livechat">LiveChat</option>
+		<option value="zendesk">Zendesk Chat</option>
+		<option value="whos_on">Whos On.Location</option>
+		<option value="pure_chat">Pure Chat</option>
+		<option value="olark">Olark</option>
+		<option value="intercom">Intercom</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF WEB ENGAGEMENT COMPETITORS-->
+
+
+<!---SURVEY COMPETITORS-->
+	<select id="survey_choice">
+		<option value="survey_gizmo">Survey Gizmo</option>
+		<option value="checkbox">Checkbox Survey</option>
+		<option value="survey_monkey">Survey Monkey</option>
+		<option value="getfeedback">getfeedback</option>
+		<option value="esurveypro">eSurveyPro</option>
+		<option value="sogosurvey">SoGoSurvey</option>
+		<option value="survey_legend">Survey Legend</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF SURVEY COMPETITORS-->
+
+
+<!---EMAIL MARKETING COMPETITORS-->
+	<select id="email_marketing">
+		<option value="mail_chimp">Mail Chimp</option>
+		<option value="constant_contact">Constant Contact (Email Plus)</option>
+		<option value="active_campaign">Active Campaign Lite</option>
+		<option value="benchmark">Benchmark</option>
+		<option value="campaigner">Campaigner</option>
+		<option value="campaign_monitor">Campaign Monitor (Unlimited)</option>
+		<option value="get_response">Get Response</option>
+		<option value="icontact">iContact</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF EMAIL MARKETING COMPETITORS-->
+
+
+<!---WEB BUILDER COMPETITORS-->
+	<select id="web_builder">
+		<option value="wix">Wix</option>
+		<option value="squarespace">Squarespace</option>
+		<option value="weebly">Weebly</option>
+		<option value="simvoly">Simvoly</option>
+		<option value="strikingly">Strikingly</option>
+		<option value="jimdo">Jimdo</option>
+		<option value="yola">Yola</option>
+		<option value="godaddy">Go Daddy</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF WEB BUILDER COMPETITORS-->
+
+
+<!---WEB OPTIMIZATION COMPETITORS-->
+	<select id="web_opt_choice">
+		<option value="crazy_egg">Crazy Egg</option>
+		<option value="vwo">VWO</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF WEB OPTIMIZATION COMPETITORS-->
+
+
+<!---ACCOUNTING SOFTWARE COMPETITORS-->
+	<select id="accounting">
+		<option value="quickbooks">Quickbooks</option>
+		<option value="freshbooks">FreshBooks</option>
+		<option value="xero">Xero</option>
+		<option value="sage_one">Sage One</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF ACCOUNTING SOFTWARE COMPETITORS-->
+
+
+<!---INVENTORY MANAGEMENT COMPETITORS-->
+	<select id="inventory">
+		<option value="veeqo">Veeqo</option>
+		<option value="unleashed">Unleashed</option>
+		<option value="tradegecko">TradeGecko</option>
+		<option value="inflow">inFlow</option>
+		<option value="stitch">Stitch Labs</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF INVENTORY MANAGEMENT COMPETITORS-->
+
+
+<!---INVOICING SOFTWARE COMPETITORS-->
+	<select id="invoice">
+		<option value="freshbooks">FreshBooks</option>
+		<option value="invoicely">Invoicely</option>
+		<option value="invoicera">Invoicera</option>
+		<option value="invoice2go">Invoice2go</option>
+		<option value="hiveage">Hiveage</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF INVOICING SOFTWARE COMPETITORS-->
+
+
+<!---SUBSCRIPTION MANAGEMENT COMPETITORS-->
+	<select id="sub_management">
+		<option value="changebee">Changebee</option>
+		<option value="cratejoy">cratejoy</option>
+		<option value="braintree">Braintree</option>
+		<option value="chargify">Chargify</option>
+		<option value="fastspring">Fastspring</option>
+		<option value="stripe">Stripe</option>
+		<option value="zuora">Zuora</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF SUBSCRIPTION MANAGEMENT COMPETITORS-->
+
+
+<!---EXPENSE MANAGEMENT COMPETITORS-->
+	<select id="expense_management">
+		<option value="fyle">Fyle</option>
+		<option value="ceretify">Ceretify</option>
+		<option value="sap">SAP Concur</option>
+		<option value="expensify">Expensify</option>
+		<option value="itemize">Itemize</option>
+		<option value="rydoo">Rydoo</option>
+		<option value="abacus">Abacus</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF EXPENSE MANAGEMENT COMPETITORS-->
+
+
+<!---PAYMENT GATEWAY COMPETITORS-->
+	<select id="payment_gateway">
+		<option value="stripe">Stripe</option>
+		<option value="2checkout">2checkout</option>
+		<option value="authorize">Authorize.net</option>
+		<option value="payza">Payza</option>
+		<option value="wepay">WePay</option>
+		<option value="paypal">Paypal</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF PAYMENT GATEWAY COMPETITORS-->
+
+
+<!---EVENT MANAGEMENT COMPETITORS-->
+	<select id="event_management">
+		<option value="eventbrite">Eventbrite</option>
+		<option value="brushfire">Brushfire</option>
+		<option value="eventsmart">Eventsmart</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF EVENT MANAGEMENT COMPETITORS-->
+
+<!---EMAIL HOSTING COMPETITORS-->
+	<select id="email_hosting">
+		<option value="office365">Office365</option>
+		<option value="gsuite">G Suite</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF EMAIL HOSTING COMPETITORS-->
+
+
+<!---CHAT COMPETITORS-->
+	<select id="chat">
+		<option value="slack">Slack</option>
+		<option value="flock">Flock</option>
+		<option value="jandi">Jandi</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF CHAT COMPETITORS-->
+
+<!---PROJECT MANAGEMENT COMPETITORS-->
+	<select id="project_management">
+		<option value="asana">Asana</option>
+		<option value="atlassian">Atlassian Jira</option>
+		<option value="basecamp">Basecamp</option>
+		<option value="clarizen">Clarizen</option>
+		<option value="microsoft">Microsoft Project</option>
+		<option value="mavenlink">Mavenlink</option>
+		<option value="teamwork">Teamwork Projects</option>
+		<option value="liquid_planner">Liquid Planner</option>
+		<option value="wrike">Wrike</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF PROJECT MANAGEMENT COMPETITORS-->
+
+
+<!---BUG TRACKING COMPETITORS-->
+	<select id="bug_tracking">
+		<option value="instabug">Instabug</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF BUG TRACKING COMPETITORS-->
+
+
+<!--- INTERNAL SOCIAL NETWORK COMPETITORS-->
+	<select id="internal">
+		<option value="jive">Jive</option>
+		<option value="yammer">Yammer</option>
+		<option value="other">Other</option>
+	</select>
+<!---END OF INTERNAL SOCIAL NETWORK COMPETITORS-->
+
+
+<!--- WEBINAR SOFTWARE COMPETITORS-->
+	<select id="webinar">
+		<option value="GoToWebinar">GoToWebinar</option>
+		<option value="ClickMeeting">ClickMeeting</option>
+		<option value="Webex">Webex</option>
+		<option value="Zoom">Zoom</option>
+		<option value="RingCentralMeetings">RingCentralMeetings</option>
+	</select>
+<!---END OF WEBINAR SOFTWARE COMPETITORS-->
+
+
+<!--- PASSWORD MANAGMENT COMPETITORS-->
+	<select id="password">
+		<option value="Sticky Password">Sticky Password</option>
+		<option value="Blur">Blur</option>
+		<option value="Keeper">Keeper</option>
+		<option value="Passord Boss">Password Boss</option>
+		<option value="Robo Form">Robo Form</option>
+		<option value="1Passord">1Password</option>
+		<option value="Dash Lane">Dash Lane</option>
+	</select>
+<!---END OF PASSWORD MANAGMENT COMPETITORS-->
+
+
+<!--- NOTE_TAKING COMPETITORS-->
+	<select id="notetaking">
+		<option value="Evernote">Evernote</option>
+		<option value="Bear">Bear</option>
+		<option value="Notability">Notability</option>
+	</select>
+<!---END OF NOTE_TAKING COMPETITORS-->
+
+
+<!--- HELPDESK SOFTWARE COMPETITORS-->
+	<select id="helpdesk">
+		<option value="Happy Fox">Happy Fox</option>
+		<option value="FreshDesk">FreshDesk</option>
+		<option value="Zendesk">Zendesk</option>
+		<option value="Jira Service Desk">Jira Service Desk</option>
+		<option value="Agiloft">Agiloft</option>
+		<option value="Clickdesk">Clickdesk</option>
+		<option value="Helpshift">Helpshift</option>
+		<option value="Kayako">Kayako</option>
+		<option value="Salesforce Service Cloud">Salesforce Service Cloud</option>
+		<option value="Support Bee">Support Bee</option>
+		<option value="Team Support">Team Support</option>
+	</select>
+<!---END OF HELPDESK SOFTWARE COMPETITORS-->
+
+
+
+<!--- REMOTE SUPPORT AND ACCESS COMPETITORS-->
+	<select id="remote">
+		<option value="Team Viewer">Team Viewer</option>
+		<option value="ControlWise Control">ControlWise Control</option>
+		<option value="Bomgar">Bomgar</option>
+		<option value="FixMe.IT">FixMe.IT</option>
+		<option value="GoToAssit">GoToAssit</option>
+		<option value="LogMeIn Rescue">LogMeIn Rescue</option>
+	</select>
+<!---END OF REMOTE SUPPORT AND ACCESS COMPETITORS-->
+
+
+<!--- RECRUITMENT SOFTWARE COMPETITORS-->
+	<select id="recruit">
+		<option value="Ultipro">Ultipro</option>
+		<option value="Breezy HR">Breezy HR</option>
+		<option value="JobDiva">JobDiva</option>
+	</select>
+<!---END OF RECRUITMENT SOFTWARE COMPETITORS-->
+
+<!-- PRICE PLANS -->
+
+
+<!---SALESFORCE -->
+	<select id="salesforce">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="essentials"> Essentials - $25.00</option>
+		<option value="professional">Professional - $75.00</option>
+		<option value="enterprise">Enterprise - $150.00</option>
+		<option value="unlimited">Unlimited - $300.00</option>
+	</select>
+<!--- END OF SALESFORCE -->
+
+<!---MICROSOFT -->
+	<select id="microsoft">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="engagement"> Engagement Plan - $115.00</option>
+		<option value="operations">Operations Plan- $190.00</option>
+		<option value="dynamics365">Dynamics 365 Plan - $210.00</option>
+	</select>
+<!--- END OF MICROSOFT -->
+
+<!--- HUBSPOT -->
+	<select id="hubspot">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="starter"> Starter - $50.00</option>
+		<option value="basic"> Basic - $200.00</option>
+		<option value="professional">Professional - $800.00</option>
+		<option value="enterprise">Enterprise - $2400.00</option>
+	</select>
+<!--- END OF HUBSPOT -->
+
+<!--- PIPEDRIVE -->
+	<select id="pipedrive">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="silver"> Silver - $12.50</option>
+		<option value="gold"> Gold - $24.20</option>
+		<option value="platinum">Platinum - $49.17</option>
+	</select>
+<!--- END OF PIPEDRIVE -->
+
+<!---SUGAR CRM -->
+	<select id="sugar">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="professional">Professional - $40.00</option>
+		<option value="enterprise">Enterprise - $65.00</option>
+		<option value="ultimate">Ultimate - $150.00</option>
+	</select>
+<!--- END OF SUGAR CRM -->
+
+
+<!---VTIGER -->
+	<select id="vtiger">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="starter">Starter - $10.00</option>
+		<option value="professional">Professional - $20.00</option>
+	</select>
+<!--- END OF VTIGER-->
+
+<!--- HUBSPOT -->
+	<select id="fresh">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="blossom"> Blossom - $12.00</option>
+		<option value="garden"> Garden - $25.00</option>
+		<option value="estate">Estate - $49.00</option>
+		<option value="forest">Forest - $79.00</option>
+	</select>
+<!--- END OF HUBSPOT -->
+
+
+
+<br><br>
 	<input type="submit">
 </form>
+
+<script>
+	$( document ).ready(function() {
+		$('#crm_choice, #online_form_choice, #sig_choice, #social_choice, #payment_gateway, #survey_choice, #expense_management, #web_engagement_choice, #event_management, #project_management, #email_hosting, #chat, #bug_tracking, #internal, #inventory, #accounting, #web_opt_choice, #email_marketing, #web_builder, #sub_management, #invoice').hide();
+
+		$('#salesforce, #microsoft, #vtiger, #sugar, #fresh, #hubspot, #pipedrive').hide();
+
+		$('#category').change(function () {
+
+			$('#crm_choice, #online_form_choice, #sig_choice, #social_choice, #payment_gateway, #survey_choice, #expense_management, #web_engagement_choice, #event_management, #project_management, #email_hosting, #chat, #bug_tracking, #internal, #inventory, #accounting, #web_opt_choice, #email_marketing, #web_builder, #sub_management, #invoice').hide();
+
+        	if ($('#category').val() == "crm") {
+            	$('#crm_choice').show();
+        	} 
+
+    		else if ($('#category').val() == "online") {
+            	$('#online_form_choice').show();
+        	} 
+
+        	else if ($('#category').val() == "sig") {
+            	$('#sig_choice').show();
+        	} 
+
+        	else if ($('#category').val() == "social_media") {
+            	$('#social_choice').show();
+        	} 
+
+        	else if ($('#category').val() == "web_engagement") {
+            	$('#web_engagement_choice').show();
+        	} 
+        	else if ($('#category').val() == "survey") {
+            	$('#survey_choice').show();
+        	} 
+        	else if ($('#category').val() == "email") {
+            	$('#email_marketing').show();
+        	} 
+        	else if ($('#category').val() == "web_builder") {
+            	$('#web_builder').show();
+        	} 
+        	else if ($('#category').val() == "web_opt") {
+            	$('#web_opt_choice').show();
+        	}
+     		else if ($('#category').val() == "accounting") {
+            	$('#accounting').show();
+        	} 
+        	else if ($('#category').val() == "inventory") {
+            	$('#inventory').show();
+        	} 
+        	else if ($('#category').val() == "invoice") {
+            	$('#invoice').show();
+        	}  
+        	else if ($('#category').val() == "subscription") {
+            	$('#sub_management').show();
+        	} 
+        	else if ($('#category').val() == "expense") {
+            	$('#expense_management').show();
+        	} 
+        	else if ($('#category').val() == "payment_gateway") {
+            	$('#payment_gateway').show();
+        	} 
+        	else if ($('#category').val() == "event") {
+            	$('#event_management').show();
+        	} 
+        	else if ($('#category').val() == "email_hosting") {
+            	$('#email_hosting').show();
+        	} 
+        	else if ($('#category').val() == "chat") {
+            	$('#chat').show();
+        	} 
+        	else if ($('#category').val() == "project") {
+            	$('#project_management').show();
+        	} 
+        	else if ($('#category').val() == "bug_tracking") {
+            	$('#bug_tracking').show();
+        	} 
+        	else if ($('#category').val() == "internal_social") {
+            	$('#internal').show();
+        	} 
+    	});
+	});
+</script>
 
 
 </body>
