@@ -4,7 +4,7 @@
 		<script src="custom.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
-	<body>
+	<body onload = "custom.changeApplication();">
 		<form>
 			Category:
 			<select id="category" onchange ="custom.changeApplication();">	
@@ -39,36 +39,90 @@
 			</select>
 		</form>
 
-		<form>
+		<form class = "application">
 			Application:
-			<select id="application">	
+			<select id="appcrm">	
 				<option id="zohocrm">Zoho CRM</option>
+			</select>
+			<select id = "appforms">
 				<option id="zohoforms">Zoho Forms</option>
+			</select>
+			<select id = "appsign">
 				<option id="zohosign">Zoho Sign</option>
+			</select>
+			<select id = "appsocial">
 				<option id="zohosocial">Zoho Social</option>
+			</select>
+			<select id = "appsales">
 				<option id="salesiq">SalesIQ</option>
+			</select>
+			<select id = "appsurvey">
 				<option id="zohosurvey">Zoho Survey</option>
+			</select>
+			<select id = "appcampaigns">
 				<option id="zohocampaigns">Zoho Campaigns</option>
+			</select>
+			<select id = "appsites">
 				<option id="zohosites">Zoho Sites</option>
+			</select>
+			<select id = "apppagesense">
 				<option id="pagesense">Pagesense</option>
+			</select>
+			<select id = "appbooks">
 				<option id="zohobooks">Zoho Books</option>
+			</select>
+			<select id = "appinventory">
 				<option id="zohoinventory">Zoho Inventory</option>
+			</select>
+			<select id = "appinvoice">
 				<option id="zohoinvoice">Zoho Invoice</option>
+			</select>
+			<select id = "appsubscription">
 				<option id="zohosubscription">Zoho Subscription</option>
+			</select>
+			<select id = "appexpense">
 				<option id="zohoexpense">Zoho Expense</option>
+			</select>
+			<select id = "appcheckout">
 		  		<option id="zohocheckout">Zoho Checkout</option>
+		  	</select>
+		  	<select id = "appbackstage">
 				<option id="zohobackstage">Zoho Backstage</option>
+			</select>
+			<select id = "appworkplace">
 				<option id="workplace">Workplace</option>
+			</select>
+			<select id = "appcliq">
 				<option id="zohocliq">Zoho Cliq</option>
+			</select>
+			<select id = "appprojects">
 				<option id="zohoprojects">Zoho Projects</option>
+			</select>
+			<select id = "appbugtracker">
 				<option id="zohobugtracker">Zoho Bugtracker</option>
+			</select>
+			<select id = "appconnect">
 				<option id="zohoconnect">Zoho Connect</option>
+			</select>
+			<select id = "appmeeting">
 				<option id="zohomeeting">Zoho Meeting</option>
+			</select>
+			<select id = "appvault">
 				<option id="zohovault">Zoho Vault</option>
+			</select>
+			<select id = "appnotebook">
 				<option id="zohonotebook">Zoho Notebook</option>
+			</select>
+			<select id = "appdesk">
 				<option id="zohodesk">Zoho Desk</option>
+			</select>
+			<select id = "appassist">
 				<option id="zohoassist">Zoho Assist</option>
+			</select>
+			<select id = "apprecruit">
 				<option id="zohorecruit">Zoho Recruit</option>
+			</select>
+			<select id = "appother">
 				<option id="applicationother">Other</option>   
 			</select>
 		</form>

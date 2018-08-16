@@ -36,93 +36,134 @@ custom.rowTotal = function(){
 	}	
 }
 
+//hides all other applications 
+custom.hideOtherApps = function(str){
+	document.getElementById(str).style.display = "inline";
+		var form = document.getElementsByClassName("application");
+		var elements = form[0];
+		for (var i = 0; i < elements.length; i++){
+			if (elements[i].id != str){
+				document.getElementById(elements[i].id).style.display = "none";
+			}
+		}
+}
+
+//displays the appropriate application
 custom.changeApplication = function(){
 	var category = document.getElementById("category").value;
-	console.log(category);
+	
 	if (category === "CRM"){
-		document.getElementById("application").value = "Zoho CRM";
+		str = "appcrm";
+		custom.hideOtherApps(str);
 	}	
 	else if (category === "Online Forms"){
-		document.getElementById("application").value = "Zoho Forms";
+		str = "appforms";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Digital Signature"){
-		document.getElementById("application").value = "Zoho Sign";
+		str = "appsign";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Social Media Management"){
-		document.getElementById("application").value = "Zoho Social";
+		str = "appsocial";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Website Engagement Monitoring"){
-		document.getElementById("application").value = "SalesIQ";
+		str = "appsales";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Survey"){
-		document.getElementById("application").value = "Zoho Survey";
+		str = "appsurvey";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Email Marketing"){
-		document.getElementById("application").value = "Zoho Campaigns";
+		str = "appcampaigns";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Website Builder"){
-		document.getElementById("application").value = "Zoho Sites";
+		str = "appsites";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Website Optimization"){
-		document.getElementById("application").value = "Pagesense";
+		str = "apppagesense";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Accounting Software"){
-		document.getElementById("application").value = "Zoho Books";
+		str = "appbooks";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Inventory Management"){
-		document.getElementById("application").value = "Zoho Inventory";
+		str = "appinventory";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Invoicing Software"){
-		document.getElementById("application").value = "Zoho Invoice";
+		str = "appinvoice";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Subscription Management"){
-		document.getElementById("application").value = "Zoho Subscription";
+		str = "appsubscription";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Expense Management"){
-		document.getElementById("application").value = "Zoho Expense";
+		str = "appexpense";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Payment Gateway"){
-		document.getElementById("application").value = "Zoho Checkout";
+		str = "appcheckout";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Event Management"){
-		document.getElementById("application").value = "Zoho Backstage";
+		str = "appbackstage";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Email Hosting"){
-		document.getElementById("application").value = "Workplace";
+		str = "appworkplace";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Chat"){
-		document.getElementById("application").value = "Zoho Cliq";
+		str = "appcliq";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Project Management"){
-		document.getElementById("application").value = "Zoho Projects";
+		str = "appprojects";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Bug Tracking Software"){
-		document.getElementById("application").value = "Zoho Bugtracker";
+		str = "appbugtracker";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Internal Social Network"){
-		document.getElementById("application").value = "Zoho Connect";
+		str = "appconnect";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Webinar Software"){
-		document.getElementById("application").value = "Zoho Meeting";
+		str = "appmeeting";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Password Management"){
-		document.getElementById("application").value = "Zoho Vault";
+		str = "appvault";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Note Taking"){
-		document.getElementById("application").value = "Zoho Notebook";
+		str = "appnotebook";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Helpdesk Software"){
-		document.getElementById("application").value = "Zoho Desk";
+		str = "appdesk";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Remote Support and Access"){
-		document.getElementById("application").value = "Zoho Assist";
+		str = "appassist";
+		custom.hideOtherApps(str);
 	}
 	else if (category === "Recruitment Software"){
-		document.getElementById("application").value = "Zoho Recruit";
+		str = "apprecruit";
+		custom.hideOtherApps(str);
 	}
 	//"Other" category; in case developer wants to add more fields
 	else{
-		document.getElementById("application").value = "Other";
+		str = "appother";
+		custom.hideOtherApps(str);
 	}
 
 
