@@ -2,7 +2,6 @@ custom = function() {};
 
 custom.rowTotal = function(){
 	var pricePlans = document.getElementsByClassName("pricing");
-	//console.log(pricePlans);
 	var prices = pricePlans[0];
 	for (var i = 0; i < prices.length; i++){
 		showStyle = prices[i].style;
