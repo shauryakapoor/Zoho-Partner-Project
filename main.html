@@ -38,7 +38,7 @@
 		<option value="helpdesk">Helpdesk Software</option>
 		<option value="remote">Remote Support and Access</option>
 		<option value="recruit">Recruitment Software</option>
-		<option value="other">Other</option>    
+		<option value="other">Other</option>
 	</select>
 <!---END OF CATEGORIES-->
 
@@ -51,7 +51,7 @@
 		<option value="sugar">Sugar CRM</option>
 		<option value="vtiger">Vtiger</option>
 		<option value="freshsales">Freshsales</option>
-		<option value="other">Other</option>    
+		<option value="other">Other</option>
 	</select>
 <!--- END OF CRM COMPETITORS-->
 
@@ -74,7 +74,7 @@
 		<option value="formidable">Formidable</option>
 		<option value="wpforms">wpforms</option>
 		<option value="formkeep">FormKeep</option>
-		<option value="other">Other</option>    
+		<option value="other">Other</option>
 	</select>
 <!--- END OF ONLINE FORM COMPETITORS-->
 
@@ -86,7 +86,7 @@
 		<option value="docusign">DocuSign</option>
 		<option value="rightsig">RightSignature</option>
 		<option value="sertifi">Sertifi</option>
-		<option value="other">Other</option>    
+		<option value="other">Other</option>
 	</select>
 <!--- END OF DIG SIG COMPETITORS-->
 
@@ -452,81 +452,91 @@
 
 <script>
 	$( document ).ready(function() {
-		$('#crm_choice, #online_form_choice, #sig_choice, #social_choice, #payment_gateway, #survey_choice, #expense_management, #web_engagement_choice, #event_management, #project_management, #email_hosting, #chat, #bug_tracking, #internal, #inventory, #accounting, #web_opt_choice, #email_marketing, #web_builder, #sub_management, #invoice').hide();
-
+		$('#crm_choice, #online_form_choice, #sig_choice, #social_choice, #payment_gateway, #survey_choice, #expense_management, #web_engagement_choice, #event_management, #project_management, #email_hosting, #chat, #bug_tracking, #internal, #webinar, #password, #notetaking, #helpdesk, #remote, #recruit, #inventory, #accounting, #web_opt_choice, #email_marketing, #web_builder, #sub_management, #invoice').hide();
 		$('#salesforce, #microsoft, #vtiger, #sugar, #fresh, #hubspot, #pipedrive').hide();
-
 		$('#category').change(function () {
-
-			$('#crm_choice, #online_form_choice, #sig_choice, #social_choice, #payment_gateway, #survey_choice, #expense_management, #web_engagement_choice, #event_management, #project_management, #email_hosting, #chat, #bug_tracking, #internal, #inventory, #accounting, #web_opt_choice, #email_marketing, #web_builder, #sub_management, #invoice').hide();
-
+			$('#crm_choice, #online_form_choice, #sig_choice, #social_choice, #payment_gateway, #survey_choice, #expense_management, #web_engagement_choice, #event_management, #project_management, #email_hosting, #chat, #bug_tracking, #internal, #webinar, #password, #notetaking, #helpdesk, #remote, #recruit, #inventory, #accounting, #web_opt_choice, #email_marketing, #web_builder, #sub_management, #invoice').hide();
         	if ($('#category').val() == "crm") {
             	$('#crm_choice').show();
-        	} 
-
+        	}
     		else if ($('#category').val() == "online") {
             	$('#online_form_choice').show();
-        	} 
-
+        	}
         	else if ($('#category').val() == "sig") {
             	$('#sig_choice').show();
-        	} 
-
+        	}
         	else if ($('#category').val() == "social_media") {
             	$('#social_choice').show();
-        	} 
-
+        	}
         	else if ($('#category').val() == "web_engagement") {
             	$('#web_engagement_choice').show();
-        	} 
+        	}
         	else if ($('#category').val() == "survey") {
             	$('#survey_choice').show();
-        	} 
+        	}
         	else if ($('#category').val() == "email") {
             	$('#email_marketing').show();
-        	} 
+        	}
         	else if ($('#category').val() == "web_builder") {
             	$('#web_builder').show();
-        	} 
+        	}
         	else if ($('#category').val() == "web_opt") {
             	$('#web_opt_choice').show();
         	}
      		else if ($('#category').val() == "accounting") {
             	$('#accounting').show();
-        	} 
+        	}
         	else if ($('#category').val() == "inventory") {
             	$('#inventory').show();
-        	} 
+        	}
         	else if ($('#category').val() == "invoice") {
             	$('#invoice').show();
-        	}  
+        	}
         	else if ($('#category').val() == "subscription") {
             	$('#sub_management').show();
-        	} 
+        	}
         	else if ($('#category').val() == "expense") {
             	$('#expense_management').show();
-        	} 
+        	}
         	else if ($('#category').val() == "payment_gateway") {
             	$('#payment_gateway').show();
-        	} 
+        	}
         	else if ($('#category').val() == "event") {
             	$('#event_management').show();
-        	} 
+        	}
         	else if ($('#category').val() == "email_hosting") {
             	$('#email_hosting').show();
-        	} 
+        	}
         	else if ($('#category').val() == "chat") {
             	$('#chat').show();
-        	} 
+        	}
         	else if ($('#category').val() == "project") {
             	$('#project_management').show();
-        	} 
+        	}
         	else if ($('#category').val() == "bug_tracking") {
             	$('#bug_tracking').show();
-        	} 
+        	}
         	else if ($('#category').val() == "internal_social") {
             	$('#internal').show();
-        	} 
+        	}
+			else if ($('#category').val() == "webinar") {
+            	$('#webinar').show();
+        	}
+			else if ($('#category').val() == "password") {
+            	$('#password').show();
+        	}
+			else if ($('#category').val() == "notetaking") {
+            	$('#notetaking').show();
+        	}
+			else if ($('#category').val() == "helpdesk") {
+            	$('#helpdesk').show();
+        	}
+			else if ($('#category').val() == "remote") {
+            	$('#remote').show();
+        	}
+			else if ($('#category').val() == "recruit") {
+            	$('#recruit').show();
+        	}
     	});
 	});
 </script>
