@@ -302,7 +302,8 @@
 		<option value="other">Other</option>
 	</select>
 <!---END OF INTERNAL SOCIAL NETWORK COMPETITORS-->
-	
+
+
 <!--- WEBINAR SOFTWARE COMPETITORS-->
 	<select id="webinar">
 		<option value="GoToWebinar">GoToWebinar</option>
@@ -362,6 +363,7 @@
 		<option value="FixMe.IT">FixMe.IT</option>
 		<option value="GoToAssit">GoToAssit</option>
 		<option value="LogMeIn Rescue">LogMeIn Rescue</option>
+	</select>
 <!---END OF REMOTE SUPPORT AND ACCESS COMPETITORS-->
 
 
@@ -370,7 +372,79 @@
 		<option value="Ultipro">Ultipro</option>
 		<option value="Breezy HR">Breezy HR</option>
 		<option value="JobDiva">JobDiva</option>
+	</select>
 <!---END OF RECRUITMENT SOFTWARE COMPETITORS-->
+
+<!-- PRICE PLANS -->
+
+
+<!---SALESFORCE -->
+	<select id="salesforce">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="essentials"> Essentials - $25.00</option>
+		<option value="professional">Professional - $75.00</option>
+		<option value="enterprise">Enterprise - $150.00</option>
+		<option value="unlimited">Unlimited - $300.00</option>
+	</select>
+<!--- END OF SALESFORCE -->
+
+<!---MICROSOFT -->
+	<select id="microsoft">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="engagement"> Engagement Plan - $115.00</option>
+		<option value="operations">Operations Plan- $190.00</option>
+		<option value="dynamics365">Dynamics 365 Plan - $210.00</option>
+	</select>
+<!--- END OF MICROSOFT -->
+
+<!--- HUBSPOT -->
+	<select id="hubspot">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="starter"> Starter - $50.00</option>
+		<option value="basic"> Basic - $200.00</option>
+		<option value="professional">Professional - $800.00</option>
+		<option value="enterprise">Enterprise - $2400.00</option>
+	</select>
+<!--- END OF HUBSPOT -->
+
+<!--- PIPEDRIVE -->
+	<select id="pipedrive">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="silver"> Silver - $12.50</option>
+		<option value="gold"> Gold - $24.20</option>
+		<option value="platinum">Platinum - $49.17</option>
+	</select>
+<!--- END OF PIPEDRIVE -->
+
+<!---SUGAR CRM -->
+	<select id="sugar">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="professional">Professional - $40.00</option>
+		<option value="enterprise">Enterprise - $65.00</option>
+		<option value="ultimate">Ultimate - $150.00</option>
+	</select>
+<!--- END OF SUGAR CRM -->
+
+
+<!---VTIGER -->
+	<select id="vtiger">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="starter">Starter - $10.00</option>
+		<option value="professional">Professional - $20.00</option>
+	</select>
+<!--- END OF VTIGER-->
+
+<!--- HUBSPOT -->
+	<select id="fresh">
+		<option value="" disabled selected="selected"> Choose a price plan </option>
+		<option value="blossom"> Blossom - $12.00</option>
+		<option value="garden"> Garden - $25.00</option>
+		<option value="estate">Estate - $49.00</option>
+		<option value="forest">Forest - $79.00</option>
+	</select>
+<!--- END OF HUBSPOT -->
+
+
 
 <br><br>
 	<input type="submit">
@@ -379,6 +453,8 @@
 <script>
 	$( document ).ready(function() {
 		$('#crm_choice, #online_form_choice, #sig_choice, #social_choice, #payment_gateway, #survey_choice, #expense_management, #web_engagement_choice, #event_management, #project_management, #email_hosting, #chat, #bug_tracking, #internal, #inventory, #accounting, #web_opt_choice, #email_marketing, #web_builder, #sub_management, #invoice').hide();
+
+		$('#salesforce, #microsoft, #vtiger, #sugar, #fresh, #hubspot, #pipedrive').hide();
 
 		$('#category').change(function () {
 
