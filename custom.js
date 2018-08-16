@@ -166,6 +166,8 @@ custom.changeApplication = function(){
 		custom.hideOtherApps(str);
 	}
 
-
+custom.changePrice = function(){
+	
+}
 
 }
