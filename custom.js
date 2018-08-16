@@ -167,7 +167,6 @@ custom.changeApplication = function(){
 	}
 
 custom.changePrice = function(){
-	
-}
+
 
 }
