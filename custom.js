@@ -29,10 +29,8 @@ custom.rowTotal = function(){
 		var num = selectedOption.match(/\$(\d+)\.\d+/)[0];
 
 		var convert = num.substring(1, num.length);
-		//console.log(convert);
 
 		numEmployees = document.getElementById("numEmp").value;
-		//console.log(numEmployees);
 
 		//Only calculate when at least 0 employee is inputted
 		if (numEmployees >= 0){
@@ -241,6 +239,8 @@ custom.changeApplication = function(){
 	else{
 		str = "appother";
 		custom.hideOtherApps(str);
+		pricestr = "priceother";
+		custom.hideOtherPrices(pricestr);
 	}
 }
 
