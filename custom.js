@@ -244,3 +244,6 @@ custom.changeApplication = function(){
 	}
 }
 
+custom.addCategory = function(){
+	
+}
