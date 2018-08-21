@@ -738,6 +738,65 @@
 				<option value="agency">Agency - $199.00</option>
 			</select>
 			<!-- END OF ECLINCHER -->
+			
+			<!-- LIVE CHAT -->
+			<select id="livechat">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="starter">Starter - $16.00</option>
+				<option value="team">Team - $33.00</option>
+				<option value="business">Business - $50.00</option>
+				<option value="enterprise">Enterprise - $149.00</option>
+			</select>
+			<!-- END OF LIVE CHAT -->
+
+			<!-- ZENDESK CHAT -->
+			<select id="zendesk">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="team">Team - $14.00</option>
+				<option value="professional">Professional - $29.00</option>
+				<option value="enterprise">Enterprise - $59.00</option>
+			</select>
+			<!-- END OF ZENDESK CHAT -->
+
+			<!-- WHOS ON -->
+			<select id="whos_on">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="small">Small Business - $35.00</option>
+				<option value="medium">Medium Business - $69.00</option>
+				<option value="large">Large Business - $125.00</option>
+				<option value="enterprise">Enterprise - $195.00</option>
+			</select>
+			<!-- END OF WHOS ON -->
+
+			<!-- PURE CHAT -->
+			<select id="pure_chat">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="pro">Pro - $29.00</option>
+			</select>
+			<!-- END OF PURE CHAT -->
+
+			<!-- OLARK -->
+			<select id="olark">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="yearly">Billed Yearly - $15.00</option>
+			</select>
+			<!-- END OF OLARK -->
+
+			<!-- INTERCOM -->
+			<select id="intercom">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="messages">Messages - $49.00</option>
+				<option value="inbox">Inbox - $19.00</option>
+				<option value="articles">Articles - $49.00</option>
+				<option value="all"> All - $117.00</option>
+			</select>
+			<!-- END OF INTERCOM -->
 
 			<!--- SURVEY GIZMO -->
 			<select id="survey_gizmo">
@@ -1014,8 +1073,8 @@
 					+ '#checkbox_survey, #survey_monkey, #SoGoSurvey, #eSurveyPro,'
 					+ ' #getfeedback, #signrequest, #adobe, #docusign, #sertifi, '
 					+ '#rightsig, #pandadoc, #eclincher, #friends, #social_pilot,'
-					+ '#hootsuite, #sprout, #buffer';
-
+					+ '#hootsuite, #sprout, #buffer, #livechat, #zendesk, #whos_on'
+					+ ',#pure_chat, #intercom, #olark';
 				$(cat).hide();
 				$(all).hide();
 
@@ -1062,10 +1121,7 @@
 						$('#online_form_choice').show();
 						$('#google').show();
 						$('#online_form_choice').change(function () {
-							$('#google, #wpforms, #123form, #formidable, #formbakery,'
-							+ ' #formsite, #gravity, #cognito, #ninja, #typeform,' 
-							+ '#paperform, #wufoo, #jotform, #airtable, #formstack,'
-							+ ' #formkeep').hide();
+							$(all).hide();
 							if($('#online_form_choice').val() == "google")
 							{
 								$('#google').show();
