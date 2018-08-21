@@ -1,10 +1,12 @@
-/*Styling sheet for main2.html in Zoho-Partner-Project*/
+/*Styling sheet for main2.html in Zoho-Partner-Project
+https://stackoverflow.com/questions/1893332/html-table-of-forms*/
+
 .table{
 	display: table;
 }
-/*.table>*{
+.table>*{
 	display: table-row;
 }
 .table>*>*{
 	display: table-cell;
-}*/
+}

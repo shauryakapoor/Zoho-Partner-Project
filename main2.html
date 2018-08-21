@@ -6,11 +6,21 @@
 	</head>
 	<body onload = "custom.changeApplication();">
 	
-	<fieldset>
-		<legend>Zoho</legend>
-	<div class = "entry-row">
+	<!--<fieldset>
+		<legend>Zoho</legend>-->
+	<!--<div class = "table">-->
+		<table id = "table" style = "width: 100%">
+			<tr>
+				<th>Category</th>
+				<th>Application</th>
+				<th>Price Plan</th>
+				<th>Number of Employees</th>
+				<th>Total</th>
+			</tr>
+			<tr id = "entryRow">
+				<td>
 		<form>
-			Category:
+			<!--Category:-->
 			<select id="category" onchange ="custom.changeApplication();">	
 				<option id="crm">CRM</option>
 				<option id="forms">Online Forms</option>
@@ -42,9 +52,10 @@
 				<option id="categoryother">Other</option>   
 			</select>
 		</form>
-
+				</td>
+				<td>
 		<form class = "application">
-			Application:
+			<!--Application:-->
 			<select id="appcrm">	
 				<option id="zohocrm">Zoho CRM</option>
 			</select>
@@ -130,9 +141,10 @@
 				<option id="applicationother">Other</option>   
 			</select>
 		</form>
-
+				</td>
+				<td>
 		<form class = "pricing">
-			Price Plan:
+			<!--Price Plan:-->
 			<select id ="pricecrm">
 				<option id="standardcrm">Standard - $12.00</option>
 				<option id="procrm">Professional - $20.00</option>
@@ -271,26 +283,30 @@
 				<option id ="otherprice">Please add category/application/price plan in back-end</option>
 			</select>
 		</form>
-
-		<h3>Number of Employees</h3>
-		<input type ="number" id = "numEmp" onchange="custom.rowTotal();">
-
-		<label for="total">Your total is: </label>
+				</td>
+				<td>
+		<!--<h3>Number of Employees</h3>-->
+		<label for="numEmp"><!--Number of Employees:--> </label>
+		<input type ="number" id = "numEmp" onkeyup="custom.rowTotal();">
+				</td>
+				<td>
+		<label for="total"><!--Your total is:--> </label>
 		<input type ="textbox" id = "total"></input>
-	
-	</div>
+				</td>
+			</table>
+	<!--</div>-->
 		<!-- Categories added here ; through Jquery 
 		https://stackoverflow.com/questions/47125014/javascript-add-the-same-form-multiple-times-if-the-user-requests-it -->
 		<div id = "categories-placeholder"></div>
 
-		<button id = "addentry"> Add Entry </button>
+		<!--<button id = "addentry"> Add Entry </button>-->
 		<!--<input type = "button" id = "addentry" value = "(+) Add Entry"/>-->
-		<!--<button onclick = "custom.addCategory();" id = "addcategory">
+		<button onclick = "custom.addEntry();" id = "addentry">
 			<span>
-				(+) Add Category
+				(+) Add Entry
 			</span>
-		</button>-->
-	</fieldset>
+		</button>
+	<!--</fieldset>-->
 	
 </body>
 </html>

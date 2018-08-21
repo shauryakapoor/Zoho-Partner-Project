@@ -15,7 +15,7 @@ custom.rowTotal = function(){
 
 	if (selectedOption == "Free"){
 		//document.getElementById("total").innerHTML = "FREE!!!";
-		document.getElementById("total").value = "FREE!!!";
+		document.getElementById("total").value = "Free! Because Zoho Loves You :)";
 	}
 	//Edge cases: decimals, after $, rounding floating-points
 	else{
@@ -250,16 +250,35 @@ custom.changeApplication = function(){
 
 //https://codereview.stackexchange.com/questions/13794/
 //dynamically-adding-rows-to-an-accessible-html-form
-$(document).ready(function(){
+/*$(document).ready(function(){
 	var $button = $('#addentry'),
-	$row = $('.entry-row').clone();
+	$row = $('.table').clone();
 	$button.click(function(){
 		$row.clone().insertBefore($button);
 	});
-});
-/*custom.addentry = function(){
-	
-}*/
+});*/
+
+/*https://stackoverflow.com/questions/47125014/javascript-add-the-same-form-multiple-times-if-the-user-requests-it
+$(document).ready(function(){
+	var placeholder = $("#categories-placeholder");
+	var add_button = $("#addentry");
+	var row = $(".entry-row");
+
+	$(add_button).click(function(e){
+		e.preventDefault();
+		$(placeholder).append(row);
+	});
+});*/
+
+
+
+custom.addEntry = function(){
+	var row = document.getElementById("entryRow");
+	var table = document.getElementById("table");
+	var clone = row.cloneNode(true);
+	clone.id = "newID";
+	table.appendChild(clone);
+}
 
 
 
