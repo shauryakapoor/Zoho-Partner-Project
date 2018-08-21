@@ -1,1 +1,10 @@
 /*Styling sheet for main2.html in Zoho-Partner-Project*/
+.table{
+	display: table;
+}
+/*.table>*{
+	display: table-row;
+}
+.table>*>*{
+	display: table-cell;
+}*/

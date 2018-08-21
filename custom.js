@@ -12,8 +12,10 @@ custom.rowTotal = function(){
 			break;
 		}
 	}
+
 	if (selectedOption == "Free"){
-		document.getElementById("total").innerHTML = "FREE!!!";
+		//document.getElementById("total").innerHTML = "FREE!!!";
+		document.getElementById("total").value = "FREE!!!";
 	}
 	//Edge cases: decimals, after $, rounding floating-points
 	else{
@@ -35,8 +37,10 @@ custom.rowTotal = function(){
 		//Only calculate when at least 0 employee is inputted
 		if (numEmployees >= 0){
 			//round to two decimal places, if needed
-			document.getElementById("total").innerHTML = "$" + Math.round((convert * numEmployees) * 100) / 100;
-		}
+			//document.getElementById("total").innerHTML = "$" + Math.round((convert * numEmployees) * 100) / 100;
+			var total = "$" + Math.round((convert * numEmployees) * 100) / 100;
+			document.getElementById("total").value = total;
+		}	
 		else if (numEmployees < 0){
 			//Edited bc did not want alert to pop up if
 			//value field was erased (js thinks this is 0)
@@ -244,6 +248,20 @@ custom.changeApplication = function(){
 	}
 }
 
-custom.addCategory = function(){
+//https://codereview.stackexchange.com/questions/13794/
+//dynamically-adding-rows-to-an-accessible-html-form
+$(document).ready(function(){
+	var $button = $('#addentry'),
+	$row = $('.entry-row').clone();
+	$button.click(function(){
+		$row.clone().insertBefore($button);
+	});
+});
+/*custom.addentry = function(){
 	
-}
+}*/
+
+
+
+
+

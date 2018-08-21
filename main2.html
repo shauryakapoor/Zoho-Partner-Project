@@ -1,10 +1,14 @@
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="styles.css">
 		<script src="custom.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body onload = "custom.changeApplication();">
+	
+	<fieldset>
+		<legend>Zoho</legend>
+	<div class = "entry-row">
 		<form>
 			Category:
 			<select id="category" onchange ="custom.changeApplication();">	
@@ -259,7 +263,7 @@
 				<option id="proassist">Professional - $13.00</option>
 			</select>
 			<select id ="pricerecruit">
-				<option id="standardrecruit">Standard - $22.50</option>
+				<option id="standardrecruit"> - $22.50</option>
 				<option id="prorecruit">Professional - $45.00</option>
 				<option id="enterpriserecruit">Enterprise - $67.50</option>
 			</select>
@@ -271,14 +275,22 @@
 		<h3>Number of Employees</h3>
 		<input type ="number" id = "numEmp" onchange="custom.rowTotal();">
 
-		<h4>Total:</h4>
-		<span id = "total"></span>
+		<label for="total">Your total is: </label>
+		<input type ="textbox" id = "total"></input>
+	
+	</div>
+		<!-- Categories added here ; through Jquery 
+		https://stackoverflow.com/questions/47125014/javascript-add-the-same-form-multiple-times-if-the-user-requests-it -->
+		<div id = "categories-placeholder"></div>
 
-		<button onclick = "custom.addCategory();" id = "addcategory">
+		<button id = "addentry"> Add Entry </button>
+		<!--<input type = "button" id = "addentry" value = "(+) Add Entry"/>-->
+		<!--<button onclick = "custom.addCategory();" id = "addcategory">
 			<span>
-				Add Category
+				(+) Add Category
 			</span>
-		</button>
-
+		</button>-->
+	</fieldset>
+	
 </body>
 </html>
