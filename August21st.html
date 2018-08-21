@@ -917,32 +917,30 @@
 
 		<script>
 			$( document ).ready(function() {
-				$('#crm_choice, #online_form_choice, #sig_choice,'
+				cat = '#crm_choice, #online_form_choice, #sig_choice,'
 					+' #social_choice, #payment_gateway, #survey_choice,'
 					+' #expense_management, #web_engagement_choice,'
 					+' #event_management, #project_management, #email_hosting,'
 					+' #chat, #bug_tracking, #internal, #webinar, #password,'
 					+' #notetaking, #helpdesk, #remote, #recruit, #inventory,'
 					+' #accounting, #web_opt_choice, #email_marketing,'
-					+' #web_builder, #sub_management, #invoice').hide();
+					+' #web_builder, #sub_management, #invoice';
 
-				$('#salesforce, #microsoft, #vtiger, #sugar, #fresh,'
-					+' #hubspot, #pipedrive').hide();
+				var all = '#salesforce, #microsoft, #vtiger, #sugar, #fresh,'
+					+ ' #hubspot, #pipedrive, #google, #wpforms, #123form, '
+					+ '#formidable, #formbakery, #formsite, #gravity, #cognito,'
+					+ ' #ninja, #typeform, #paperform, #wufoo, #jotform, #airtable,'
+					+ '#formstack, #formkeep, #survey_legend, #survey_gizmo, '
+					+ '#checkbox_survey, #survey_monkey, #SoGoSurvey, #eSurveyPro,'
+					+ ' #getfeedback, #signrequest, #adobe, #docusign, #sertifi, '
+					+ '#rightsig, #pandadoc, #eclincher, #friends, #social_pilot,'
+					+ '#hootsuite, #sprout, #buffer';
 
-				$('#google, #wpforms, #123form, #formidable, #formbakery,'
-					+ ' #formsite, #gravity, #cognito, #ninja, #typeform,' 
-					+ '#paperform, #wufoo, #jotform, #airtable, #formstack,'
-					+ ' #formkeep').hide();
+				$(cat).hide();
+				$(all).hide();
 
 				$('#category').change(function () {
-					$('#crm_choice, #online_form_choice, #sig_choice,'
-						+' #social_choice, #payment_gateway, #survey_choice,'
-						+' #expense_management, #web_engagement_choice,'
-						+' #event_management, #project_management, #email_hosting,'
-						+' #chat, #bug_tracking, #internal, #webinar, #password,'
-						+' #notetaking, #helpdesk, #remote, #recruit, #inventory,'
-						+' #accounting, #web_opt_choice, #email_marketing,'
-						+' #web_builder, #sub_management, #invoice').hide();
+					$(cat).hide();
 					if ($('#category').val() == "crm") {
 						$('#crm_choice').show();
 						$('#salesforce').show();
