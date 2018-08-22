@@ -1,7 +1,7 @@
 /*Styling sheet for main2.html in Zoho-Partner-Project
 https://stackoverflow.com/questions/1893332/html-table-of-forms*/
 
-.table{
+/*.table{
 	display: table;
 }
 .table>*{
@@ -9,4 +9,4 @@ https://stackoverflow.com/questions/1893332/html-table-of-forms*/
 }
 .table>*>*{
 	display: table-cell;
-}
+}*/ 

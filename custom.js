@@ -279,6 +279,11 @@ custom.addEntry = function(){
 	clone.id = "newID";
 	table.appendChild(clone);
 }
+/*$(document).ready(function() {
+    $("button").on("click", function() {
+      $("table").append($("table").find("#entryRow").clone().removeAttr("id").find("input").val("").end());
+    });
+});*/
 
 
 
