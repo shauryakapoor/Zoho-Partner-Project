@@ -75,7 +75,19 @@ custom.hideOtherPrices = function(str){
 }
 
 //displays the appropriate application
-custom.changeApplication = function(){
+//in the respective row
+custom.changeApplication = function(tableID, rowID){
+	var table = document.getElementById(tableID);
+	console.log(table);
+	var row = document.getElementById(rowID);
+	console.log(row);
+
+	//var rowCount = table.rows.length;
+	//don't forget, includes the title row!
+	//console.log(rowCount);
+
+
+
 	var category = document.getElementById("category").value;
 	
 	if (category === "CRM"){
@@ -255,6 +267,7 @@ custom.addRow = function(tableID){
 	var rowCount = table.rows.length;
 	//don't forget, includes the title row!
 	console.log(rowCount);
+	//insert the row at this position in the table
 	var row = table.insertRow(rowCount);
 	var colCount = table.rows[0].cells.length;
 	console.log(colCount);
@@ -265,18 +278,25 @@ custom.addRow = function(tableID){
 		var newcell = row.insertCell(i);
 		newcell.outerHTML = table.rows[1].cells[i].outerHTML;
 	}
-	var listItems = row.getElementsByTagName("input");
-	console.log(listItems);
+
+	//three important cells: price plan, # employees, total
+	//var listItems = row.getElementsByTagName("input");
+	//listItems should be of length 3
+	var item = row.getElementsByTagName("td");
+	console.log(item);
+	console.log(item[2].innerText);
+	
+	/*console.log(listItems)
 	for (i = 0; i < listItems.length; i++){
 		listItems[i].setAttribute("oninput", custom.calculate(row.id));
-	}
+	}*/
 
 }
 
 custom.calculate = function(elementID){
 	var mainRow = document.getElementById(elementID);
 	console.log(mainRow);
-	var box1 = mainRow.querySelectorAll("#pricing")[0].value;
+	console.log(mainRow.querySelectorAll("pricing"));
 	var box2 = mainRow.querySelectorAll("#numEmp")[0].value;
 	var total = mainRow.querySelectorAll("#total")[0];
 	console.log(total);
