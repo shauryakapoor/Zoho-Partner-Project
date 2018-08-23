@@ -1764,7 +1764,7 @@
 			<select id="ultipro">
 				<option value="" disabled selected="selected">
 				Choose a price plan </option>
-				<option value="stanard"> Standard - $600.00/year - 5 users</option>
+				<option value="standard"> Standard - $600.00/year - 5 users</option>
 			</select>
 			<!--- END OF ULTIPRO-->
 
@@ -1772,7 +1772,7 @@
 			<select id="breezy_hr">
 				<option value="" disabled selected="selected">
 				Choose a price plan </option>
-				<option value="startup">  - $149.00</option>
+				<option value="startup"> Startup - $149.00</option>
 				<option value="business"> Business - $299.00</option>
 			</select>
 			<!--- END OF BREEZYHR-->
@@ -1781,10 +1781,10 @@
 			<select id="job_diva">
 				<option value="" disabled selected="selected">
 				Choose a price plan </option>
-				<option value="standard">  - $200.00</option>
+				<option value="standard"> Standard - $200.00</option>
 			</select>
 			<!--- END OF JOBDIVA-->
-			
+
 			<!--- TEAM_VIEWER-->
 			<select id="team_viewer">
 				<option value="" disabled selected="selected">
@@ -1799,7 +1799,7 @@
 			<select id="controlwise_control">
 				<option value="" disabled selected="selected">
 				Choose a price plan </option>
-				<option value="one"> one - $19.00</option>
+				<option value="one"> One - $19.00</option>
 				<option value="standard"> Standard - $35.00</option>
 				<option value="premium"> Premium - $45.00</option>
 			</select>
@@ -1813,9 +1813,8 @@
 			</select>
 			<!--- END OF BOMGAR-->
 
-
 			<!--- FIXME.IT-->
-			<select id="fixme.it">
+			<select id="fixme">
 				<option value="" disabled selected="selected">
 				Choose a price plan </option>
 				<option value="monthly"> Monthy - $30.00</option>
@@ -1828,7 +1827,16 @@
 				Choose a price plan </option>
 				<option value="monthly"> Monthy - $69.00</option>
 			</select>
-			<!--- END OF GOTOASSIT-->
+			<!--- END OF GOTOASSIST-->
+
+			<!--- LOGMEIN RESCUE-->
+			<select id="logmein">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="remote">Rescue Remote Support - $108.25</option>
+				<option value="mobile">Rescue + Mobile Support - $145.75</option>
+			</select>
+			<!--- END OF LOGMEIN RESCUE-->
 
 			<br><br>
 			<input type="submit">
@@ -1872,7 +1880,9 @@
 					+ ', #kayako, #helpshift, #jira, #clickdesk, #breezy_hr, #job_diva'
 					+ ', #ultipro, #instabug, #wrike, #liquid_planner, #teamwork_projects'
 					+ ', #mavenlink, #microsoft_project, #clarizen, #basecamp,'
-					+ ' #atlassian_jira, #asana, #jandi, #flock, #slack, #gsuite, #office365';
+					+ ' #atlassian_jira, #asana, #jandi, #flock, #slack, #gsuite, #office365'
+					+ ', #logmein, #bomgar, #team_viewer, #controlwise_control, #fixme,'
+					+ '#gotoassist';
 
 				$(cat).hide();
 				$(all).hide();
