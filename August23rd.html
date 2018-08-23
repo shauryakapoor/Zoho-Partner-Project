@@ -1,1 +1,1416 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/style.css">
+		<script src="https://bit.ly/2BGgoMX"></script>
+	</head>
+	<body>
+		<form id ="calc" action=".">
+			<!---CATEGORIES-->
+			<select id="category" required>
+				<option value="" disabled="disabled" selected="selected">
+				Choose a Category </option>
+				<option value="crm">CRM</option>
+				<option value="online">Online Forms</option>
+				<option value="sig">Digital Signature</option>
+				<option value="social_media">Social Media Management</option>
+				<option value="web_engagement">
+				Website Engagement Monitoring</option>
+				<option value="survey">Survey</option>
+				<option value="email">Email Marketing</option>
+				<option value="web_builder">Website Builder</option>
+				<option value="web_opt">Website Optimization</option>
+				<option value="accounting">Accounting Software</option>
+				<option value="inventory">Inventory Management</option>
+				<option value="invoice">Invoicing Software</option>
+				<option value="subscription">Subscription Management</option>
+				<option value="expense">Expense Management</option>
+				<option value="payment_gateway">Payment Gateway</option>
+				<option value="event">Event Management</option>
+				<option value="email_hosting">Email Hosting</option>
+				<option value="chat">Chat</option>
+				<option value="project">Project Management</option>
+				<option value="bug_tracking">Bug Tracking Software</option>
+				<option value="internal_social">Internal Social Network</option>
+				<option value="webinar">Webinar Software</option>
+				<option value="password">Password Management</option>
+				<option value="notetaking">Note Taking</option>
+				<option value="helpdesk">Helpdesk Software</option>
+				<option value="remote">Remote Support and Access</option>
+				<option value="recruit">Recruitment Software</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF CATEGORIES-->
 
+			<!--CRM COMPETITORS-->
+			<select id="crm_choice">
+				<option value="salesforce">Salesforce</option>
+				<option value="microsoft">Microsoft</option>
+				<option value="hubspot">Hubspot</option>
+				<option value="pipedrive">Pipedrive</option>
+				<option value="sugar">Sugar CRM</option>
+				<option value="vtiger">Vtiger</option>
+				<option value="fresh">Freshsales</option>
+				<option value="other">Other</option>
+			</select>
+			<!--- END OF CRM COMPETITORS-->
+
+			<!--ONLINE FORM COMPETITORS-->
+			<select id="online_form_choice">
+				<option value="google">Google Forms</option>
+				<option value="wufoo">Wufoo</option>
+				<option value="jotform">JotForm</option>
+				<option value="airtable">Airtable</option>
+				<option value="formstack">Formstack</option>
+				<option value="typeform">Typeform</option>
+				<option value="paperform">Paperform</option>
+				<option value="formsite">Formsite</option>
+				<option value="123form">123 Form Builder</option>
+				<option value="cognito">Cognito Forms</option>
+				<option value="formbakery">FORMBAKERY</option>
+				<option value="gravity">Gravity Forms</option>
+				<option value="ninja">Ninja Forms</option>
+				<option value="formidable">Formidable</option>
+				<option value="wpforms">wpforms</option>
+				<option value="formkeep">FormKeep</option>
+				<option value="other">Other</option>
+			</select>
+			<!--- END OF ONLINE FORM COMPETITORS-->
+
+			<!--DIG SIG COMPETITORS-->
+			<select id="sig_choice">
+				<option value="signrequest">SignRequest</option>
+				<option value="pandadoc">PandaDoc</option>
+				<option value="adobe">Adobe Sign</option>
+				<option value="docusign">DocuSign</option>
+				<option value="rightsig">RightSignature</option>
+				<option value="sertifi">Sertifi</option>
+				<option value="other">Other</option>
+			</select>
+			<!--- END OF DIG SIG COMPETITORS-->
+
+			<!---SOCIAL MEDIA COMPETITORS-->
+			<select id="social_choice">
+				<option value="hootsuite">Hootsuite</option>
+				<option value="buffer">Buffer</option>
+				<option value="friends">Friends + Me</option>
+				<option value="social_pilot">Social Pilot</option>
+				<option value="sprout">Sprout Social</option>
+				<option value="eclincher">eClincher</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF SOCIAL MEDIA COMPETITORS-->
+
+			<!---WEB ENGAGEMENT COMPETITORS-->
+			<select id="web_engagement_choice">
+				<option value="livechat">LiveChat</option>
+				<option value="zendesk">Zendesk Chat</option>
+				<option value="whos_on">Whos On.Location</option>
+				<option value="pure_chat">Pure Chat</option>
+				<option value="olark">Olark</option>
+				<option value="intercom">Intercom</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF WEB ENGAGEMENT COMPETITORS-->
+
+			<!---SURVEY COMPETITORS-->
+			<select id="survey_choice">
+				<option value="survey_gizmo">Survey Gizmo</option>
+				<option value="checkbox">Checkbox Survey</option>
+				<option value="survey_monkey">Survey Monkey</option>
+				<option value="getfeedback">getfeedback</option>
+				<option value="esurveypro">eSurveyPro</option>
+				<option value="sogosurvey">SoGoSurvey</option>
+				<option value="survey_legend">Survey Legend</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF SURVEY COMPETITORS-->
+
+			<!---EMAIL MARKETING COMPETITORS-->
+			<select id="email_marketing">
+				<option value="mail_chimp">Mail Chimp</option>
+				<option value="constant_contact">
+				Constant Contact (Email Plus)</option>
+				<option value="active_campaign">Active Campaign Lite</option>
+				<option value="benchmark">Benchmark</option>
+				<option value="campaigner">Campaigner</option>
+				<option value="campaign_monitor">
+				Campaign Monitor (Unlimited)</option>
+				<option value="get_response">Get Response</option>
+				<option value="icontact">iContact</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF EMAIL MARKETING COMPETITORS-->
+
+			<!---WEB BUILDER COMPETITORS-->
+			<select id="web_builder">
+				<option value="wix">Wix</option>
+				<option value="squarespace">Squarespace</option>
+				<option value="weebly">Weebly</option>
+				<option value="simvoly">Simvoly</option>
+				<option value="strikingly">Strikingly</option>
+				<option value="jimdo">Jimdo</option>
+				<option value="yola">Yola</option>
+				<option value="godaddy">Go Daddy</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF WEB BUILDER COMPETITORS-->
+
+			<!---WEB OPTIMIZATION COMPETITORS-->
+			<select id="web_opt_choice">
+				<option value="crazy_egg">Crazy Egg</option>
+				<option value="vwo">VWO</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF WEB OPTIMIZATION COMPETITORS-->
+
+			<!---ACCOUNTING SOFTWARE COMPETITORS-->
+			<select id="accounting">
+				<option value="quickbooks">Quickbooks</option>
+				<option value="freshbooks">FreshBooks</option>
+				<option value="xero">Xero</option>
+				<option value="sage_one">Sage One</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF ACCOUNTING SOFTWARE COMPETITORS-->
+
+			<!---INVENTORY MANAGEMENT COMPETITORS-->
+			<select id="inventory">
+				<option value="veeqo">Veeqo</option>
+				<option value="unleashed">Unleashed</option>
+				<option value="tradegecko">TradeGecko</option>
+				<option value="inflow">inFlow</option>
+				<option value="stitch">Stitch Labs</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF INVENTORY MANAGEMENT COMPETITORS-->
+
+			<!---INVOICING SOFTWARE COMPETITORS-->
+			<select id="invoice">
+				<option value="freshbooks">FreshBooks</option>
+				<option value="invoicely">Invoicely</option>
+				<option value="invoicera">Invoicera</option>
+				<option value="invoice2go">Invoice2go</option>
+				<option value="hiveage">Hiveage</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF INVOICING SOFTWARE COMPETITORS-->
+
+			<!---SUBSCRIPTION MANAGEMENT COMPETITORS-->
+			<select id="sub_management">
+				<option value="changebee">Changebee</option>
+				<option value="cratejoy">cratejoy</option>
+				<option value="braintree">Braintree</option>
+				<option value="chargify">Chargify</option>
+				<option value="fastspring">Fastspring</option>
+				<option value="stripe">Stripe</option>
+				<option value="zuora">Zuora</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF SUBSCRIPTION MANAGEMENT COMPETITORS-->
+
+			<!---EXPENSE MANAGEMENT COMPETITORS-->
+			<select id="expense_management">
+				<option value="fyle">Fyle</option>
+				<option value="ceretify">Ceretify</option>
+				<option value="sap">SAP Concur</option>
+				<option value="expensify">Expensify</option>
+				<option value="itemize">Itemize</option>
+				<option value="rydoo">Rydoo</option>
+				<option value="abacus">Abacus</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF EXPENSE MANAGEMENT COMPETITORS-->
+
+			<!---PAYMENT GATEWAY COMPETITORS-->
+			<select id="payment_gateway">
+				<option value="stripe">Stripe</option>
+				<option value="2checkout">2checkout</option>
+				<option value="authorize">Authorize.net</option>
+				<option value="payza">Payza</option>
+				<option value="wepay">WePay</option>
+				<option value="paypal">Paypal</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF PAYMENT GATEWAY COMPETITORS-->
+
+			<!---EVENT MANAGEMENT COMPETITORS-->
+			<select id="event_management">
+				<option value="eventbrite">Eventbrite</option>
+				<option value="brushfire">Brushfire</option>
+				<option value="eventsmart">Eventsmart</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF EVENT MANAGEMENT COMPETITORS-->
+
+			<!---EMAIL HOSTING COMPETITORS-->
+			<select id="email_hosting">
+				<option value="office365">Office365</option>
+				<option value="gsuite">G Suite</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF EMAIL HOSTING COMPETITORS-->
+
+			<!---CHAT COMPETITORS-->
+			<select id="chat">
+				<option value="slack">Slack</option>
+				<option value="flock">Flock</option>
+				<option value="jandi">Jandi</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF CHAT COMPETITORS-->
+
+			<!---PROJECT MANAGEMENT COMPETITORS-->
+			<select id="project_management">
+				<option value="asana">Asana</option>
+				<option value="atlassian">Atlassian Jira</option>
+				<option value="basecamp">Basecamp</option>
+				<option value="clarizen">Clarizen</option>
+				<option value="microsoft">Microsoft Project</option>
+				<option value="mavenlink">Mavenlink</option>
+				<option value="teamwork">Teamwork Projects</option>
+				<option value="liquid_planner">Liquid Planner</option>
+				<option value="wrike">Wrike</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF PROJECT MANAGEMENT COMPETITORS-->
+
+			<!---BUG TRACKING COMPETITORS-->
+			<select id="bug_tracking">
+				<option value="instabug">Instabug</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF BUG TRACKING COMPETITORS-->
+
+			<!--- INTERNAL SOCIAL NETWORK COMPETITORS-->
+			<select id="internal">
+				<option value="jive">Jive</option>
+				<option value="yammer">Yammer</option>
+				<option value="other">Other</option>
+			</select>
+			<!---END OF INTERNAL SOCIAL NETWORK COMPETITORS-->
+
+			<!--- WEBINAR SOFTWARE COMPETITORS-->
+			<select id="webinar">
+				<option value="GoToWebinar">GoToWebinar</option>
+				<option value="ClickMeeting">ClickMeeting</option>
+				<option value="Webex">Webex</option>
+				<option value="Zoom">Zoom</option>
+				<option value="RingCentralMeetings">RingCentralMeetings</option>
+			</select>
+			<!---END OF WEBINAR SOFTWARE COMPETITORS-->
+
+			<!--- PASSWORD MANAGMENT COMPETITORS-->
+			<select id="password">
+				<option value="Sticky Password">Sticky Password</option>
+				<option value="Blur">Blur</option>
+				<option value="Keeper">Keeper</option>
+				<option value="Passord Boss">Password Boss</option>
+				<option value="Robo Form">Robo Form</option>
+				<option value="1Passord">1Password</option>
+				<option value="Dash Lane">Dash Lane</option>
+			</select>
+			<!---END OF PASSWORD MANAGMENT COMPETITORS-->
+
+			<!--- NOTE_TAKING COMPETITORS-->
+			<select id="notetaking">
+				<option value="Evernote">Evernote</option>
+				<option value="Bear">Bear</option>
+				<option value="Notability">Notability</option>
+			</select>
+			<!---END OF NOTE_TAKING COMPETITORS-->
+
+			<!--- HELPDESK SOFTWARE COMPETITORS-->
+			<select id="helpdesk">
+				<option value="Happy Fox">Happy Fox</option>
+				<option value="FreshDesk">FreshDesk</option>
+				<option value="Zendesk">Zendesk</option>
+				<option value="Jira Service Desk">Jira Service Desk</option>
+				<option value="Agiloft">Agiloft</option>
+				<option value="Clickdesk">Clickdesk</option>
+				<option value="Helpshift">Helpshift</option>
+				<option value="Kayako">Kayako</option>
+				<option value="Salesforce Service Cloud">
+				Salesforce Service Cloud</option>
+				<option value="Support Bee">Support Bee</option>
+				<option value="Team Support">Team Support</option>
+			</select>
+			<!---END OF HELPDESK SOFTWARE COMPETITORS-->
+
+			<!--- REMOTE SUPPORT AND ACCESS COMPETITORS-->
+			<select id="remote">
+				<option value="Team Viewer">Team Viewer</option>
+				<option value="ControlWise Control">ControlWise Control</option>
+				<option value="Bomgar">Bomgar</option>
+				<option value="FixMe.IT">FixMe.IT</option>
+				<option value="GoToAssit">GoToAssit</option>
+				<option value="LogMeIn Rescue">LogMeIn Rescue</option>
+			</select>
+			<!---END OF REMOTE SUPPORT AND ACCESS COMPETITORS-->
+
+			<!--- RECRUITMENT SOFTWARE COMPETITORS-->
+			<select id="recruit">
+				<option value="Ultipro">Ultipro</option>
+				<option value="Breezy HR">Breezy HR</option>
+				<option value="JobDiva">JobDiva</option>
+			</select>
+			<!---END OF RECRUITMENT SOFTWARE COMPETITORS-->
+
+			<!--==============PRICE PLANS=============-->
+
+			<!---SALESFORCE -->
+			<select id="salesforce">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="essentials"> Essentials - $25.00</option>
+				<option value="professional">Professional - $75.00</option>
+				<option value="enterprise">Enterprise - $150.00</option>
+				<option value="unlimited">Unlimited - $300.00</option>
+			</select>
+			<!--- END OF SALESFORCE -->
+
+			<!---MICROSOFT -->
+			<select id="microsoft">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="engagement"> Engagement Plan - $115.00</option>
+				<option value="operations">Operations Plan- $190.00</option>
+				<option value="dynamics365">Dynamics 365 Plan - $210.00</option>
+			</select>
+			<!--- END OF MICROSOFT -->
+
+			<!--- HUBSPOT -->
+			<select id="hubspot">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="starter"> Starter - $50.00</option>
+				<option value="basic"> Basic - $200.00</option>
+				<option value="professional">Professional - $800.00</option>
+				<option value="enterprise">Enterprise - $2400.00</option>
+			</select>
+			<!--- END OF HUBSPOT -->
+
+			<!--- PIPEDRIVE -->
+			<select id="pipedrive">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="silver"> Silver - $12.50</option>
+				<option value="gold"> Gold - $24.20</option>
+				<option value="platinum">Platinum - $49.17</option>
+			</select>
+			<!--- END OF PIPEDRIVE -->
+
+			<!---SUGAR CRM -->
+			<select id="sugar">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="professional">Professional - $40.00</option>
+				<option value="enterprise">Enterprise - $65.00</option>
+				<option value="ultimate">Ultimate - $150.00</option>
+			</select>
+			<!--- END OF SUGAR CRM -->
+
+			<!---VTIGER -->
+			<select id="vtiger">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="starter">Starter - $10.00</option>
+				<option value="professional">Professional - $20.00</option>
+			</select>
+			<!--- END OF VTIGER-->
+
+			<!--- FRESHSALES -->
+			<select id="fresh">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="blossom"> Blossom - $12.00</option>
+				<option value="garden"> Garden - $25.00</option>
+				<option value="estate">Estate - $49.00</option>
+				<option value="forest">Forest - $79.00</option>
+			</select>
+			<!--- END OF FRESHSALES -->
+
+			<!-- GOOGLE FORMS -->
+			<select id="google">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="basic"> Basic - $5.00</option>
+				<option value="business"> Business - $10.00</option>
+				<option value="enterprise">Enterprise - $25.00</option>
+			</select>
+			<!-- END OF GOOGLE FORMS -->
+
+			<!-- WUFOO -->
+			<select id="wufoo">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="starter"> Starter - $14.08</option>
+				<option value="professional"> Professional - $29.08</option>
+				<option value="advanced">Advanced - $74.08</option>
+			</select>
+			<!-- END OF WUFOO -->
+
+			<!--- JOTFORM -->
+			<select id="jotform">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="bronze">Bronze - $15.80</option>
+				<option value="silver"> Silver - $32.50</option>
+				<option value="gold"> Gold - $82.50</option>
+			</select>
+			<!--- END OF JOTFORM -->
+
+			<!-- AIRTABLE -->
+			<select id="airtable">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="plus"> Plus - $10.00</option>
+				<option value="pro"> Pro - $20.00</option>
+				<option value="enterprise">Enterprise - ?</option>
+			</select>
+			<!-- END OF AIRTABLE -->
+
+			<!--- FORMSTACK -->
+			<select id="formstack">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="bronze">Bronze - $19.00</option>
+				<option value="silver"> Silver - $39.00</option>
+				<option value="gold"> Gold - $99.00</option>
+				<option value="platinum"> Platinum - $249.00</option>
+			</select>
+			<!--- END OF FORMSTACK -->
+
+			<!-- TYPEFORM -->
+			<select id="typeform">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="pro"> Pro - $30.00</option>
+				<option value="proplus">Pro+ - $59.00</option>
+			</select>
+			<!-- END OF TYPEFORM -->
+
+			<!-- PAPERFORM -->
+			<select id="paperform">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="essentials"> Essentials - $15.00</option>
+				<option value="pro"> Pro - $39.00</option>
+				<option value="agency">Agency - $99.00</option>
+			</select>
+			<!-- END OF PAPERFORM -->
+
+			<!-- FORMSITE -->
+			<select id="formsite">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="deluxe"> Deluxe - $14.95</option>
+				<option value="pro1"> Pro 1 - $24.95</option>
+				<option value="pro2"> Pro 2 - $49.95</option>
+				<option value="pro3"> Pro  3 - $99.95</option>
+			</select>
+			<!-- END OF FORMSITE -->
+
+			<!-- 123 FORM BUILDER -->
+			<select id="123form">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="gold"> Gold - $24.99</option>
+				<option value="platinum"> Platinum - $44.99</option>
+				<option value="corporate">Corporate - $84.99</option>
+			</select>
+			<!-- END OF 123 FORM BUILDER -->
+
+			<!-- COGNITO FORMS -->
+			<select id="cognito">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="pro"> Pro - $10.00</option>
+				<option value="team"> Team - $24.00</option>
+				<option value="enterprise">Enterprise - $99.00</option>
+			</select>
+			<!-- END OF COGNITO FORMS -->
+
+			<!-- FORMBAKERY -->
+			<select id="formbakery">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="personal"> Personal - $9.00</option>
+				<option value="professional"> Professional - $19.00</option>
+				<option value="5form"> 5 Form Pack - $49.00</option>
+			</select>
+			<!-- END OF FORMBAKERY-->
+
+			<!-- GRAVITY FORMS -->
+			<select id="gravity">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="basic"> Basic - $59.00</option>
+				<option value="pro"> Pro - $159.00</option>
+				<option value="elite">Elite - $259.00</option>
+			</select>
+			<!-- END OF GRAVITY FORMS -->
+
+			<!-- NINJA FORMS -->
+			<select id="ninja">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="personal"> Personal - $99.00</option>
+				<option value="professional"> Professional - $199.00</option>
+				<option value="agency"> Agency - $499.00</option>
+			</select>
+			<!-- END OF NINJA FORMS -->
+
+			<!-- FORMIDABLE -->
+			<select id="formidable">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="personal"> Personal - $49.00</option>
+				<option value="creator"> Creator - $99.00</option>
+				<option value="business"> Business - $199.00</option>
+				<option value="enterprise"> Enterprise - $399.00</option>
+			</select>
+			<!-- END OF FORMIDABLE -->
+
+			<!-- WPFORMS -->
+			<select id="wpforms">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="basic"> Basic - $59.00</option>
+				<option value="plus"> Plus - $99.00</option>
+				<option value="pro"> Pro - $199.00</option>
+				<option value="agency">Agency - $349.00</option>
+			</select>
+			<!-- END OF WPFORMS -->
+
+			<!-- FORM KEEP -->
+			<select id="formkeep">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="freelancer"> Freelancer - $59.00</option>
+				<option value="agency">Agency - $99.00</option>
+				<option value="enterprise">Enterprise - $199.00</option>
+			</select>
+			<!-- END OF FORM KEEP -->
+
+			<!-- SIGNREQUEST -->
+			<select id="signrequest">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="professional">Professional - $7.00</option>
+				<option value="sme">SME - $16.00</option>
+			</select>
+			<!-- END OF SIGNREQUEST-->
+
+			<!-- PANDADOC -->
+			<select id="pandadoc">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="professional">Professional  - $19.00</option>
+				<option value="business">Business - $39.00</option>
+			</select>
+			<!-- END OF PANDADOC-->
+
+			<!-- ADOBE SIGN -->
+			<select id="adobe">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="individual"> Individual - $9.99</option>
+				<option value="team">Team - $24.99</option>
+				<option value="business">Business - $39.99</option>
+			</select>
+			<!-- END OF ADOBE SIGN-->
+
+			<!-- DOCU SIGN -->
+			<select id="docusign">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="personal">Personal - $10.00</option>
+				<option value="standard">Standard - $25.00</option>
+				<option value="business"> Business Pro - $40.00</option>
+			</select>
+			<!-- END OF DOCUSIGN-->
+
+			<!-- RIGHT SIGNATURE -->
+			<select id="rightsig">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="personal"> Personal - $12.00</option>
+				<option value="business"> Business - $60.00</option>
+				<option value="additional">Additional Plans - $99.00</option>
+			</select>
+			<!-- END OF RIGHT SIGNATURE-->
+
+			<!-- SERTIFI -->
+			<select id="sertifi">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="eauth"> eAuthorize - $105.00</option>
+				<option value="pro"> Pro - $150.00</option>
+				<option value="proplus">Pro+ - $250.00</option>
+			</select>
+			<!-- END OF SERTIFI-->
+
+			<!-- HOOTSUITE -->
+			<select id="hootsuite">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="professional"> Professional - $19.00</option>
+				<option value="team"> Team - $99.00</option>
+				<option value="business">Business - $599.00</option>
+			</select>
+			<!-- END OF HOOTSUITE -->
+
+			<!-- BUFFER -->
+			<select id="buffer">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="small"> Small - $99.00</option>
+				<option value="medium"> Medium - $199.00</option>
+				<option value="large">Large - $399.00</option>
+			</select>
+			<!-- END OF BUFFER-->
+
+			<!-- FRIENDS + ME -->
+			<select id="friends">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="individual"> Individual - $7.50</option>
+				<option value="small"> Small - $24.17</option>
+				<option value="medium"> Medium - $49.17</option>
+				<option value="large">Large - $215.84</option>
+			</select>
+			<!-- END OF FRIENDS + ME -->
+
+			<!-- SOCIAL PILOT -->
+			<select id="social_pilot">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="individual"> Individual - $8.33</option>
+				<option value="professional"> Professional - $25.00</option>
+				<option value="small_team"> Small Team - $41.66</option>
+				<option value="agency">Agency - $83.33</option>
+			</select>
+			<!-- END OF SOCIAL PILOT -->
+
+			<!-- SPROUT SOCIAL -->
+			<select id="sprout">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="premium"> Premium - $99.00</option>
+				<option value="corporate"> Corporate - $149.00</option>
+				<option value="enterprise"> Enterprise - $249.00</option>
+			</select>
+			<!-- END OF SPROUT SOCIAL -->
+
+			<!-- ECLINCHER -->
+			<select id="eclincher">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="basic"> Basic - $49.00</option>
+				<option value="premier"> Premier - $99.00</option>
+				<option value="agency">Agency - $199.00</option>
+			</select>
+			<!-- END OF ECLINCHER -->
+
+			<!-- LIVE CHAT -->
+			<select id="livechat">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="starter">Starter - $16.00</option>
+				<option value="team">Team - $33.00</option>
+				<option value="business">Business - $50.00</option>
+				<option value="enterprise">Enterprise - $149.00</option>
+			</select>
+			<!-- END OF LIVE CHAT -->
+
+			<!-- ZENDESK CHAT -->
+			<select id="zendesk">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="team">Team - $14.00</option>
+				<option value="professional">Professional - $29.00</option>
+				<option value="enterprise">Enterprise - $59.00</option>
+			</select>
+			<!-- END OF ZENDESK CHAT -->
+
+			<!-- WHOS ON -->
+			<select id="whos_on">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="small">Small Business - $35.00</option>
+				<option value="medium">Medium Business - $69.00</option>
+				<option value="large">Large Business - $125.00</option>
+				<option value="enterprise">Enterprise - $195.00</option>
+			</select>
+			<!-- END OF WHOS ON -->
+
+			<!-- PURE CHAT -->
+			<select id="pure_chat">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="pro">Pro - $29.00</option>
+			</select>
+			<!-- END OF PURE CHAT -->
+
+			<!-- OLARK -->
+			<select id="olark">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="yearly">Billed Yearly - $15.00</option>
+			</select>
+			<!-- END OF OLARK -->
+
+			<!-- INTERCOM -->
+			<select id="intercom">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="messages">Messages - $49.00</option>
+				<option value="inbox">Inbox - $19.00</option>
+				<option value="articles">Articles - $49.00</option>
+				<option value="all"> All - $117.00</option>
+			</select>
+			<!-- END OF INTERCOM -->
+
+			<!--- SURVEY GIZMO -->
+			<select id="survey_gizmo">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="explorer"> Explorer - $25.00</option>
+				<option value="adventurer"> Adventurer - $85.00</option>
+				<option value="voyager"> Voyager - $150.00</option>
+			</select>
+			<!--- END OF SURVEY GIZMO -->
+
+			<!--- CHECKBOX SURVEY-->
+			<select id="checkbox_survey">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="hosted"> Hosted - $450.00</option>
+				<option value="on-premise"> On-Premise - $4900.00</option>
+			</select>
+			<!--- END OF CHECKBOX SURVEY -->
+
+			<!--- SURVEY MONKEY-->
+			<select id="survey_monkey">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="advantage"> Advantage - $32.00</option>
+				<option value="stanard"> Standard - $37.00</option>
+				<option value="Premier"> Premier - $99.00</option>
+			</select>
+			<!--- END OF SURVEY MONKEY -->
+
+			<!--- GETFEEDBACK-->
+			<select id="getfeedback">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="professional"> Professional - $50.00</option>
+				<option value="advanced"> Advanced - $150.00</option>
+			</select>
+			<!--- END OF GETFEEDBACK -->
+
+			<!--- ESURVEYPRO-->
+			<select id="eSurveyPro">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="basic"> Advantage - $100.00</option>
+				<option value="premium"> Premium - $200.00</option>
+				<option value="corporate"> Corporate - $400.00</option>
+			</select>
+			<!--- END OF ESURVEYPRO -->
+
+			<!--- SOGOSURVEY-->
+			<select id="SoGoSurvey">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="plus"> Plus - $13.00</option>
+				<option value="pro"> Pro - $40.00</option>
+				<option value="enterprise"> Enterprise - $99.00</option>
+			</select>
+			<!--- END OF SoGoSurvey -->
+
+			<!--- SURVEYLEGEND-->
+			<select id="survey_legend">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="pro"> Pro - $15.00</option>
+				<option value="business"> Business - $25.00</option>
+				<option value="legandary"> Legandary - $65.00</option>
+			</select>
+			<!--- END OF SURVEYLEGEND -->
+
+			<!--- MAIL CHIMP-->
+			<select id="mail_chimp">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="5000_monthy_subsribers"> 5000 Monthy Subsribers - $50.00</option>
+				<option value="10000_monthy_subsribers"> 10000 Monthy Subsribers - $75.00</option>
+				<option value="25000_monthy_subsribers"> 25000 Monthy Subsribers - $150.00</option>
+				<option value="50000_monthy_subsribers"> 50000 Monthy Subsribers - $240.00</option>
+				<option value="100000_monthy_subsribers"> 100000 Monthy Subsribers - $475.00</option>
+			</select>
+			<!--- END OF MAIL CHIMP -->
+
+			<!--- CONSTANT CONTACT(EMAIL PLUS)-->
+			<select id="constant_contact">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="5000_monthy_subsribers"> 5000 Monthy Subsribers - $95.00</option>
+				<option value="10000_monthy_subsribers"> 10000 Monthy Subsribers - $125.00</option>
+				<option value="25000_monthy_subsribers"> 25000 Monthy Subsribers - $225.00</option>
+				<option value="50000_monthy_subsribers"> 50000 Monthy Subsribers - $335.00</option>
+			</select>
+			<!--- END OF CONSTANT CONTACT(EMAIL PLUS) -->
+
+			<!--- ACTIVE CAMPAIGN(LITE)-->
+			<select id="active_campaign">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="5000_monthy_subsribers"> 5000 Monthy Subsribers - $69.00</option>
+				<option value="10000_monthy_subsribers"> 10000 Monthy Subsribers - $111.00</option>
+				<option value="25000_monthy_subsribers"> 25000 Monthy Subsribers - $179.00</option>
+				<option value="50000_monthy_subsribers"> 50000 Monthy Subsribers - $239.00</option>
+				<option value="100000_monthy_subsribers"> 100000 Monthy Subsribers - $369.00</option>
+			</select>
+			<!--- END OF ACTIVE CAMPIGN(LITE) -->
+
+			<!--- BENCHMARK-->
+			<select id="benchmark">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="5000_monthy_subsribers"> 5000 Monthy Subsribers - $51.99</option>
+				<option value="10000_monthy_subsribers"> 10000 Monthy Subsribers - $81.99</option>
+				<option value="25000_monthy_subsribers"> 25000 Monthy Subsribers - $164.99</option>
+				<option value="50000_monthy_subsribers"> 50000 Monthy Subsribers - $254.99</option>
+				<option value="100000_monthy_subsribers"> 100000 Monthy Subsribers - $494.99</option>
+			</select>
+			<!--- END OF BENCHMARK-->
+
+			<!--- CAMPAIGNER-->
+			<select id="campaigner">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="5000_monthy_subsribers"> 5000 Monthy Subsribers - $49.95</option>
+				<option value="10000_monthy_subsribers"> 10000 Monthy Subsribers - $79.95</option>
+				<option value="25000_monthy_subsribers"> 25000 Monthy Subsribers - $149.95</option>
+				<option value="50000_monthy_subsribers"> 50000 Monthy Subsribers - $299.95</option>
+				<option value="100000_monthy_subsribers"> 100000 Monthy Subsribers - $549.95</option>
+			</select>
+			<!--- END OF CAMPAIGNER-->
+
+			<!--- CAMPAIGN MONITOR-->
+			<select id="campaign_monitor">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="5000_monthy_subsribers"> 5000 Monthy Subsribers - $99.00</option>
+				<option value="10000_monthy_subsribers"> 10000 Monthy Subsribers - $149.00</option>
+				<option value="25000_monthy_subsribers"> 25000 Monthy Subsribers - $399.00</option>
+				<option value="50000_monthy_subsribers"> 50000 Monthy Subsribers - $699.00</option>
+			</select>
+			<!--- END OF CAMPAIGN MONITOR-->
+
+			<!--- GET RESPONSE-->
+			<select id="get_response">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="5000_monthy_subsribers"> 5000 Monthy Subsribers - $45.00</option>
+				<option value="10000_monthy_subsribers"> 10000 Monthy Subsribers - $65.00</option>
+				<option value="25000_monthy_subsribers"> 25000 Monthy Subsribers - $145.00</option>
+				<option value="50000_monthy_subsribers"> 50000 Monthy Subsribers - $250.00</option>
+				<option value="100000_monthy_subsribers"> 100000 Monthy Subsribers - $450.00</option>
+			</select>
+			<!--- END OF GET RESPONSE-->
+
+			<!--- ICONTACT-->
+			<select id="icontact">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="5000_monthy_subsribers"> 5000 Monthy Subsribers - $79.00</option>
+				<option value="10000_monthy_subsribers"> 10000 Monthy Subsribers - $117.00</option>
+				<option value="25000_monthy_subsribers"> 25000 Monthy Subsribers - $239.00</option>
+				<option value="50000_monthy_subsribers"> 50000 Monthy Subsribers - $299.00</option>
+			</select>
+			<!--- END OF ICONTACT-->
+			
+			<!--- WIX-->
+			<select id="wix">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="combo"> Combo - $11.00</option>
+				<option value="unlimited"> Unlimited - $14.00</option>
+				<option value="ecommerce"> eCommerce - $17.00</option>
+				<option value="vip"> VIP - $25.00</option>
+			</select>
+			<!--- END OF WIX -->
+
+			<!--- SQUARESPACE-->
+			<select id="squarespace">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="personal"> Personal - $12.00</option>
+				<option value="professional"> Professional - $18.00</option>
+				<option value="basic"> Basic - $26.00</option>
+				<option value="advanced"> Advanced - $40.00</option>
+			</select>
+			<!---END OF SQUARESPACE -->
+
+			<!--- SIMVOLY-->
+			<select id="simvoly">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="mini"> Mini - $5.00</option>
+				<option value="personal"> Personal - $9.00</option>
+				<option value="business"> Business - $14.00</option>
+				<option value="e-commerce"> E-Commerce - $22.00</option>
+			</select>
+			<!--- END OF SIMVOLY -->
+
+			<!--- STRIKINGLY-->
+			<select id="strikingly">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="limited"> Limited - $5.00</option>
+				<option value="pro"> Pro - $9.00</option>
+				<option value="vip"> VIP - $14.00</option>
+			</select>
+			<!--- END OF STRIKINGLY -->
+
+			<!--- JIMDO-->
+			<select id="jimdo">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="pro"> Pro - $7.50</option>
+				<option value="business"> Business - $20.00</option>
+				<option value="seo_plus"> SEO Plus - $30.00</option>
+				<option value="platinum"> Platinum - $40.00</option>
+			</select>
+			<!--- END OF JIMDO -->
+
+			<!--- YOLA-->
+			<select id="yola">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="bronze"> Bronze - $4.95</option>
+				<option value="silver"> Silver - $9.95</option>
+				<option value="gold"> Gold - $19.95</option>
+			</select>
+			<!--- END OF YOLA-->
+
+			<!--- GODADDY-->
+			<select id="go_daddy">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="personal"> Personal - $5.95</option>
+				<option value="business"> Business - $9.99</option>
+				<option value="business_plus"> Business_Plus - $14.99</option>
+				<option value="online_store"> Online_Store - $19.99</option>
+			</select>
+			<!--- END OF GODADDY-->
+
+			<!--- CRAZYEGG-->
+			<select id="crazy_egg">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="basic"> Basic - $29.00</option>
+				<option value="standard"> Standard - $49.00</option>
+				<option value="plus"> Plus - $79.00</option>
+				<option value="pro"> Pro - $189.00</option>
+			</select>
+			<!--- END OF CRAZYEGG-->
+
+			<!--- VWO-->
+			<select id="vwo">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="growth"> Growth - $299.00</option>
+				<option value="pro"> Pro - $599.00</option>
+			</select>
+			<!--- END OF VWO-->
+			
+			<!--- QUICKBOOKS-->
+			<select id="quickbooks">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="simple_start"> Simple_Start - $10.00</option>
+				<option value="essentials"> Essential - $17.00</option>
+				<option value="plus"> Plus - $30.00</option>
+			</select>
+			<!--- END OF QUICKBOOKS-->
+
+			<!--- FRESHBOOKS-->
+			<select id="freshbooks">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="lite"> Lite - $15.00</option>
+				<option value="plus"> Plus - $25.00</option>
+				<option value="premium"> Premium - $50.00</option>
+			</select>
+			<!--- END OF FRESHBOOKS-->
+
+			<!--- ZERO-->
+			<select id="xero">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="starter"> Starter - $9.00</option>
+				<option value="standard"> Standard - $30.00</option>
+				<option value="premium10"> Premium10 - $70.00</option>
+			</select>
+			<!--- END OF XERO-->
+
+
+			<!--- SAGE ONE-->
+			<select id="sage_one">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="accounting_start"> Accouting_Start - $10.00</option>
+				<option value="accounting"> Accounting - $25.00</option>
+			</select>
+			<!--- END OF SAGE ONE-->
+			
+			<!--- EVENTBRITE-->
+			<select id="eventbrite">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="essentials"> Essentials - 1% + $0.99 / paid ticket</option>
+				<option value="professional"> Professional - 1% + $0.99 / paid ticket</option>
+			</select>
+			<!--- END OF EVENTBRITE-->
+
+			<!--- BRUSHFIRE-->
+			<select id="brushfire">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="standard"> Standard - $1.00 + 1%</option>
+				<option value="professional"> Professional - $2.00 + 1%</option>
+			</select>
+			<!--- END OF BRUSHFIRE-->
+
+			<!--- EVENTSMART-->
+			<select id="eventsmart">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="personal"> Personal - $50.00</option>
+				<option value="business"> Business - $100.00</option>
+			</select>
+			<!--- END OF EVENTSMART-->
+
+			<!--- VEEQO -->
+			<select id="veeqo">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="accelerator"> Accelerator - $200.00</option>
+				<option value="high"> High Growth - $475.00</option>
+				<option value="premium"> Premium - $1350.00</option>
+			</select>
+			<!--- END OF VEEQO -->	
+
+			<!--- UNLEASHED-->
+			<select id="unleashed">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="small"> Small - $85.00</option>
+				<option value="medium"> Medium - $165.00</option>
+				<option value="large"> Large - $329.00</option>
+				<option value="large_plus"> Large Plus - $579.00</option>
+			</select>
+			<!--- END OF UNLEASHED-->
+
+
+			<!--- TRADEGECKO-->
+			<select id="tradegecko">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="lite"> Lite - $79.00</option>
+				<option value="small"> Small Business - $199.00</option>
+				<option value="business"> Business - $459.00</option>
+				<option value="premium"> Premium - $799.00</option>
+			</select>
+			<!--- END OF TRADEGECKO-->
+
+			<!--- INFLOW-->
+			<select id="inflow">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="essentials"> Essentials - $69.00</option>
+				<option value="advanced"> Advanced - $149.00</option>
+				<option value="enterprise"> Enterprise - $599.00</option>
+			</select>
+			<!--- END OF INFLOW -->
+
+			<!--- STITCH LABS-->
+			<select id="stitch">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="basic"> Basic - $499.00</option>
+				<option value="high"> High Growth - $799.00</option>
+			</select>
+			<!--- END OF STITCH LABS -->
+
+			<!--- FRESHBOOKS -->
+			<select id="fresh">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="lite"> Lite - $15.00</option>
+				<option value="plus"> Plus - $25.00</option>
+				<option value="premium"> Premium - $50.00</option>
+			</select>
+			<!--- END OF FRESHBOOKS -->
+
+			<!--- INVOICELY -->
+			<select id="invoicely">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="basic"> Basic - $9.99</option>
+				<option value="professional"> Professional - $19.99</option>
+				<option value="enterprise"> Enterprise - $29.99</option>
+			</select>
+			<!--- END OF INVOICELY -->
+
+			<!--- INVOICERA-->
+			<select id="invoicera">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="pro"> Pro - $15.00</option>
+				<option value="infinite"> Infinite - $149.00</option>
+			</select>
+			<!--- END OF INVOICERA -->
+
+			<!--- INVOICE2GO -->
+			<select id="invoice2go">
+				<option value="" disabled selected="selected">
+				Choose a price plan </option>
+				<option value="starter"> Starter - $1.69</option>
+				<option value="pro"> Pro - $8.99</option>
+				<option value="enterprise"> Enterprise - $12.99</option>
+				<option value="unlimited"> Unlimited - $33.99</option>
+			</select>
+			<!--- END OF INVOICELY -->
+
+			<br><br>
+			<input type="submit">
+		</form>
+
+		<script>
+			$( document ).ready(function() {
+				cat = '#crm_choice, #online_form_choice, #sig_choice,'
+					+' #social_choice, #payment_gateway, #survey_choice,'
+					+' #expense_management, #web_engagement_choice,'
+					+' #event_management, #project_management, #email_hosting,'
+					+' #chat, #bug_tracking, #internal, #webinar, #password,'
+					+' #notetaking, #helpdesk, #remote, #recruit, #inventory,'
+					+' #accounting, #web_opt_choice, #email_marketing,'
+					+' #web_builder, #sub_management, #invoice';
+
+				var all = '#salesforce, #microsoft, #vtiger, #sugar, #fresh,'
+					+ ' #hubspot, #pipedrive, #google, #wpforms, #123form, '
+					+ '#formidable, #formbakery, #formsite, #gravity, #cognito,'
+					+ ' #ninja, #typeform, #paperform, #wufoo, #jotform, #airtable,'
+					+ '#formstack, #formkeep, #survey_legend, #survey_gizmo, '
+					+ '#checkbox_survey, #survey_monkey, #SoGoSurvey, #eSurveyPro,'
+					+ ' #getfeedback, #signrequest, #adobe, #docusign, #sertifi, '
+					+ '#rightsig, #pandadoc, #eclincher, #friends, #social_pilot,'
+					+ '#hootsuite, #sprout, #buffer, #livechat, #zendesk, #whos_on'
+					+ ',#pure_chat, #intercom, #olark, #mail_chimp, #constant_contact'
+					+', #campaigner, #campaign_monitor, #active_campaign, #yola, '
+					+ '#jimdo, #strikingly, #simvoly, #go_daddy, #squarespace'
+					+', #wix, #icontact, #get_response, #benchmark, #veeqo, #stitch'
+					+ ', #tradegecko, #inflow, #unleashed, #brushfire, #eventsmart,'
+					+ '#eventbrite, #eventsmart, #sage_one, #xero, #crazy_egg,'
+					+ '#quickbooks, #freshbooks, #vwo, #';
+
+				$(cat).hide();
+				$(all).hide();
+
+				$('#category').change(function () {
+					$(cat).hide();
+					if ($('#category').val() == "crm") {
+						$('#crm_choice').show();
+						$(all).hide();
+
+						$('#crm_choice').change(function () {
+							$(all).hide();
+							if($('#crm_choice').val() == "salesforce")
+							{
+								$('#salesforce').show();
+							}
+							else if($('#crm_choice').val() == "microsoft")
+							{
+								$('#microsoft').show();
+							}
+							else if($('#crm_choice').val() == "hubspot")
+							{
+								$('#hubspot').show();
+							}
+							else if($('#crm_choice').val() == "vtiger")
+							{
+								$('#vtiger').show();
+							}
+							else if($('#crm_choice').val() == "sugar")
+							{
+								$('#sugar').show();
+							}
+							else if($('#crm_choice').val() == "pipedrive")
+							{
+								$('#pipedrive').show();
+							}
+							else if($('#crm_choice').val() == "fresh")
+							{
+								$('#fresh').show();
+							}
+						});
+					}
+					else if ($('#category').val() == "online") {
+						$('#online_form_choice').show();
+						$(all).hide();
+
+						$('#online_form_choice').change(function () {
+							$(all).hide();
+
+							if($('#online_form_choice').val() == "google")
+							{
+								$('#google').show();
+							}
+							else if($('#online_form_choice').val() == "wufoo")
+							{
+								$('#wufoo').show();
+							}
+							else if($('#online_form_choice').val() == "jotform")
+							{
+								$('#jotform').show();
+							}
+							else if($('#online_form_choice').val() == "airtable")
+							{
+								$('#airtable').show();
+							}
+							else if($('#online_form_choice').val() == "wpforms")
+							{
+								$('#wpforms').show();
+							}
+							else if($('#online_form_choice').val() == "formstack")
+							{
+								$('#formstack').show();
+							}
+							else if($('#online_form_choice').val() == "formkeep")
+							{
+								$('#formkeep').show();
+							}
+							else if($('#online_form_choice').val() == "formidable")
+							{
+								$('#formidable').show();
+							}
+							else if($('#online_form_choice').val() == "formbakery")
+							{
+								$('#formbakery').show();
+							}
+							else if($('#online_form_choice').val() == "123form")
+							{
+								$('#123form').show();
+							}
+							else if($('#online_form_choice').val() == "typeform")
+							{
+								$('#typeform').show();
+							}
+							else if($('#online_form_choice').val() == "cognito")
+							{
+								$('#cognito').show();
+							}
+							else if($('#online_form_choice').val() == "ninja")
+							{
+								$('#ninja').show();
+							}
+							else if($('#online_form_choice').val() == "gravity")
+							{
+								$('#gravity').show();
+							}
+							else if($('#online_form_choice').val() == "paperform")
+							{
+								$('#paperform').show();
+							}
+							else if($('#online_form_choice').val() == "formsite")
+							{
+								$('#formsite').show();
+							}
+						});
+					}
+					else if ($('#category').val() == "sig") {
+						$(all).hide();
+						$('#sig_choice').show();
+					}
+					else if ($('#category').val() == "social_media") {
+						$('#social_choice').show();
+					}
+					else if ($('#category').val() == "web_engagement") {
+						$('#web_engagement_choice').show();
+					}
+					else if ($('#category').val() == "survey") {
+						$('#survey_choice').show();
+					}
+					else if ($('#category').val() == "email") {
+						$('#email_marketing').show();
+					}
+					else if ($('#category').val() == "web_builder") {
+						$('#web_builder').show();
+					}
+					else if ($('#category').val() == "web_opt") {
+						$('#web_opt_choice').show();
+					}
+					else if ($('#category').val() == "accounting") {
+						$('#accounting').show();
+					}
+					else if ($('#category').val() == "inventory") {
+						$('#inventory').show();
+					}
+					else if ($('#category').val() == "invoice") {
+						$('#invoice').show();
+					}
+					else if ($('#category').val() == "subscription") {
+						$('#sub_management').show();
+					}
+					else if ($('#category').val() == "expense") {
+						$('#expense_management').show();
+					}
+					else if ($('#category').val() == "payment_gateway") {
+						$('#payment_gateway').show();
+					}
+					else if ($('#category').val() == "event") {
+						$('#event_management').show();
+					}
+					else if ($('#category').val() == "email_hosting") {
+						$('#email_hosting').show();
+					}
+					else if ($('#category').val() == "chat") {
+						$('#chat').show();
+					}
+					else if ($('#category').val() == "project") {
+						$('#project_management').show();
+					}
+					else if ($('#category').val() == "bug_tracking") {
+						$('#bug_tracking').show();
+					}
+					else if ($('#category').val() == "internal_social") {
+						$('#internal').show();
+					}
+					else if ($('#category').val() == "webinar") {
+						$('#webinar').show();
+					}
+					else if ($('#category').val() == "password") {
+						$('#password').show();
+					}
+					else if ($('#category').val() == "notetaking") {
+						$('#notetaking').show();
+					}
+					else if ($('#category').val() == "helpdesk") {
+						$('#helpdesk').show();
+					}
+					else if ($('#category').val() == "remote") {
+						$('#remote').show();
+					}
+					else if ($('#category').val() == "recruit") {
+						$('#recruit').show();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
