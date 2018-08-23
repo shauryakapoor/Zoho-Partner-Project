@@ -17,7 +17,8 @@
 				<th>Number of Employees</th>
 				<th>Total</th>
 			</tr>
-			<tr id = "entryRow">
+			<!--<tr id = "entryRow">-->
+				<tr id = "row_0">
 				<td>
 		<form>
 			<!--Category:-->
@@ -301,13 +302,13 @@
 
 		<!--<button id = "addentry"> Add Entry </button>-->
 		<!--<input type = "button" id = "addentry" value = "(+) Add Entry"/>-->
-		<button onclick = "custom.addEntry();" id = "addentry">
+		<!--<button onclick = "custom.addEntry();" id = "addentry">
 			<span>
 				(+) Add Entry
 			</span>
-		</button>
+		</button>-->
+		<input type = "button" value = "Add Entry" onClick = "custom.addRow('table')"/>
 
-		<!--<button>Clone</button>-->
 	<!--</fieldset>-->
 	
 </body>
