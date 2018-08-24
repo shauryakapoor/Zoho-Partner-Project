@@ -8,14 +8,14 @@ custom.rowTotal = function(){
 		displayStyle = showStyle.display;
 		if (displayStyle == "inline"){
 			selectedOption = document.getElementById(prices[i].id).value;
-			selectedOption;
+			//selectedOption;
 			break;
 		}
 	}
 
 	if (selectedOption == "Free"){
 		//document.getElementById("total").innerHTML = "FREE!!!";
-		document.getElementById("total").value = "FREE!!!";
+		document.getElementById("total").value = "Free! B/c Zoho loves u :)";
 	}
 	//Edge cases: decimals, after $, rounding floating-points
 	else{
@@ -49,6 +49,7 @@ custom.rowTotal = function(){
 	}	
 }
 
+custom.translatePrice
 //hides all other applications 
 custom.hideOtherApps = function(str){
 	document.getElementById(str).style.display = "inline";
@@ -74,7 +75,19 @@ custom.hideOtherPrices = function(str){
 }
 
 //displays the appropriate application
-custom.changeApplication = function(){
+//in the respective row
+custom.changeApplication = function(tableID, rowID){
+	var table = document.getElementById(tableID);
+	console.log(table);
+	var row = document.getElementById(rowID);
+	console.log(row);
+
+	//var rowCount = table.rows.length;
+	//don't forget, includes the title row!
+	//console.log(rowCount);
+
+
+
 	var category = document.getElementById("category").value;
 	
 	if (category === "CRM"){
@@ -248,18 +261,83 @@ custom.changeApplication = function(){
 	}
 }
 
+custom.addRow = function(tableID){
+	var table = document.getElementById(tableID);
+	console.log(table);
+	var rowCount = table.rows.length;
+	//don't forget, includes the title row!
+	console.log(rowCount);
+	//insert the row at this position in the table
+	var row = table.insertRow(rowCount);
+	var colCount = table.rows[0].cells.length;
+	console.log(colCount);
+	row.id = 'row_' + rowCount;
+	console.log(row.id);
+	//insert columns for new row
+	for (var i = 0; i < colCount; i++){
+		var newcell = row.insertCell(i);
+		newcell.outerHTML = table.rows[1].cells[i].outerHTML;
+	}
+
+	//three important cells: price plan, # employees, total
+	//var listItems = row.getElementsByTagName("input");
+	//listItems should be of length 3
+	var item = row.getElementsByTagName("td");
+	console.log(item);
+	console.log(item[2].innerText);
+	
+	/*console.log(listItems)
+	for (i = 0; i < listItems.length; i++){
+		listItems[i].setAttribute("oninput", custom.calculate(row.id));
+	}*/
+
+}
+
+custom.calculate = function(elementID){
+	var mainRow = document.getElementById(elementID);
+	console.log(mainRow);
+	console.log(mainRow.querySelectorAll("pricing"));
+	var box2 = mainRow.querySelectorAll("#numEmp")[0].value;
+	var total = mainRow.querySelectorAll("#total")[0];
+	console.log(total);
+	var result = box1 * box2;
+	total.value = result;
+}
 //https://codereview.stackexchange.com/questions/13794/
 //dynamically-adding-rows-to-an-accessible-html-form
-$(document).ready(function(){
+/*$(document).ready(function(){
 	var $button = $('#addentry'),
-	$row = $('.entry-row').clone();
+	$row = $('.table').clone();
 	$button.click(function(){
 		$row.clone().insertBefore($button);
 	});
-});
-/*custom.addentry = function(){
-	
+});*/
+
+/*https://stackoverflow.com/questions/47125014/javascript-add-the-same-form-multiple-times-if-the-user-requests-it
+$(document).ready(function(){
+	var placeholder = $("#categories-placeholder");
+	var add_button = $("#addentry");
+	var row = $(".entry-row");
+
+	$(add_button).click(function(e){
+		e.preventDefault();
+		$(placeholder).append(row);
+	});
+});*/
+
+/*custom.addEntry = function(){
+	var row = document.getElementById("entryRow");
+	var table = document.getElementById("table");
+	var clone = row.cloneNode(true);
+	clone.id = "newID";
+	table.appendChild(clone);
 }*/
+
+/*$(document).ready(function() {
+    $("button").on("click", function() {
+      $("table").append($("table").find("#entryRow").clone().removeAttr("id").find("input").val("").end());
+    });
+});*/
 
 
 
