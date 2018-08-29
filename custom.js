@@ -76,11 +76,13 @@ custom.hideOtherPrices = function(str, rowID){
 
 //displays the appropriate application
 //in the respective row
-custom.changeApplication = function(tableID, rowID){
-	var table = document.getElementById(tableID);
-	var row = document.getElementById(rowID);
-
-
+custom.changeApplication = function(rowID){
+	var row = rowID;
+	console.log(rowID);
+	
+	//console.log((rowCategory).value);
+	//console.log(row);
+	//var category = 
 	//old way how to do it based off of raw html form
 	var category = document.getElementById("category").value;
 	//console.log(document.getElementById("category"));
@@ -266,6 +268,7 @@ custom.addRow = function(tableID){
 	var row = table.insertRow(rowCount);
 	var colCount = table.rows[0].cells.length;
 	row.id = 'row_' + rowCount;
+	console.log(row.id);
 	//insert columns for new row
 	for (var i = 0; i < colCount; i++){
 		var newcell = row.insertCell(i);
@@ -281,7 +284,10 @@ custom.addRow = function(tableID){
 	console.log((items[2].id));*/
 
 	var items = row.getElementsByTagName("form");
-	console.log(items);
+	//console.log(items);
+	for (var i = 0; i < items.length; i++){
+		items[i].setAttribute("onchange", "custom.changeApplication("+row.id+")");
+	}
 
 	/*var items = row.getElementsByClassName("pricing");
 	console.log(items);

@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="styles.css">
 		<script src="custom.js"></script>
 	</head>
-	<body onload = "custom.changeApplication('table', 'row_0');">
+	<body onload = "custom.changeApplication('row_0');">
 	
 	<!--<fieldset>
 		<legend>Zoho</legend>-->
@@ -22,7 +22,7 @@
 				<td>
 		<form>
 			<!--Category:-->
-			<select id="category" onchange ="custom.changeApplication();">	
+			<select id="category" onchange ="custom.changeApplication('row_0');">	
 				<option id="crm">CRM</option>
 				<option id="forms">Online Forms</option>
 				<option id="sig">Digital Signature</option>
@@ -308,7 +308,7 @@
 			</span>
 		</button>-->
 		<input type = "button" value = "Add Entry" onClick = "custom.addRow('table')"/>
-
+		</tr>
 	<!--</fieldset>-->
 	
 </body>
