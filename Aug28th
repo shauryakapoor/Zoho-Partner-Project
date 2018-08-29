@@ -2140,6 +2140,48 @@
 						});
 					}
 					
+					else if ($('#category').val() == "email") {
+						$(all).hide();
+						$('#email_marketing').show();
+
+						$('#email_marketing').change(function () {
+							$(all).hide();
+
+							if($('#email_marketing').val() == "mail_chimp")
+							{
+								$('#mail_chimp').show();
+							}
+							else if($('#email_marketing').val() == "constant_contact")
+							{
+								$('#constant_contact').show();
+							}
+							else if($('#email_marketing').val() == "active_campaign")
+							{
+								$('#active_campaign').show();
+							}
+							else if($('#email_marketing').val() == "benchmark")
+							{
+								$('#benchmark').show();
+							}
+							else if($('#email_marketing').val() == "campaigner")
+							{
+								$('#campaigner').show();
+							}
+							else if($('#email_marketing').val() == "campaign_monitor")
+							{
+								$('#campaign_monitor').show();
+							}
+							else if($('#email_marketing').val() == "get_response")
+							{
+								$('#get_response').show();
+							}
+							else if($('#email_marketing').val() == "icontact")
+							{
+								$('#icontact').show();
+							}
+						});
+					}
+					
 					
 					
 					
