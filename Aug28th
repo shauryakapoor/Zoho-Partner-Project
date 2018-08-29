@@ -2099,6 +2099,52 @@
 							}
 						});
 					}
+					
+					#leaving so much space because I am a bit confused 
+					
+					else if ($('#category').val() == "survey") {
+						$(all).hide();
+						$('#survey_choice').show();
+
+						$('#survey_choice').change(function () {
+							$(all).hide();
+
+							if($('#survey_choice').val() == "survey_gizmo")
+							{
+								$('#survey_gizmo').show();
+							}
+							else if($('#survey_choice').val() == "checkbox")
+							{
+								$('#checkbox_survey').show();
+							}
+							else if($('#survey_choice').val() == "survey_monkey")
+							{
+								$('#survey_monkey').show();
+							}
+							else if($('#survey_choice').val() == "getfeedback")
+							{
+								$('#getfeedback').show();
+							}
+							else if($('#survey_choice').val() == "esurveypro")
+							{
+								$('#eSurveyPro').show();
+							}
+							else if($('#survey_choice').val() == "sogosurvey")
+							{
+								$('#SoGoSurvey').show();
+							}
+							else if($('#survey_choice').val() == "survey_legend")
+							{
+								$('#survey_legend').show();
+							}
+						});
+					}
+					
+					
+					
+					
+					
+					
 					else if ($('#category').val() == "survey") {
 						$('#survey_choice').show();
 					}
