@@ -49,9 +49,8 @@ custom.rowTotal = function(){
 	}	
 }
 
-custom.translatePrice
 //hides all other applications 
-custom.hideOtherApps = function(str){
+custom.hideOtherApps = function(str, rowID){
 	document.getElementById(str).style.display = "inline";
 		var form = document.getElementsByClassName("application");
 		var elements = form[0];
@@ -63,9 +62,10 @@ custom.hideOtherApps = function(str){
 }
 
 //hides all other prices
-custom.hideOtherPrices = function(str){
+custom.hideOtherPrices = function(str, rowID){
 	document.getElementById(str).style.display = "inline";
 		var form = document.getElementsByClassName("pricing");
+		//console.log(form);
 		var elements = form[0];
 		for (var i = 0; i < elements.length; i++){
 			if (elements[i].id != str){
@@ -78,18 +78,13 @@ custom.hideOtherPrices = function(str){
 //in the respective row
 custom.changeApplication = function(tableID, rowID){
 	var table = document.getElementById(tableID);
-	console.log(table);
 	var row = document.getElementById(rowID);
-	console.log(row);
-
-	//var rowCount = table.rows.length;
-	//don't forget, includes the title row!
-	//console.log(rowCount);
 
 
-
+	//old way how to do it based off of raw html form
 	var category = document.getElementById("category").value;
-	
+	//console.log(document.getElementById("category"));
+
 	if (category === "CRM"){
 		appstr = "appcrm";
 		custom.hideOtherApps(appstr);
@@ -98,6 +93,7 @@ custom.changeApplication = function(tableID, rowID){
 	}	
 	else if (category === "Online Forms"){
 		str = "appforms";
+		console.log("--- testing ---");
 		custom.hideOtherApps(str);
 		pricestr = "priceforms";
 		custom.hideOtherPrices(pricestr);
@@ -261,31 +257,57 @@ custom.changeApplication = function(tableID, rowID){
 	}
 }
 
+//https://stackoverflow.com/questions/31470273/perform-calculations-on-dynamically-added-rows
 custom.addRow = function(tableID){
 	var table = document.getElementById(tableID);
-	console.log(table);
 	var rowCount = table.rows.length;
 	//don't forget, includes the title row!
-	console.log(rowCount);
 	//insert the row at this position in the table
 	var row = table.insertRow(rowCount);
 	var colCount = table.rows[0].cells.length;
-	console.log(colCount);
 	row.id = 'row_' + rowCount;
-	console.log(row.id);
 	//insert columns for new row
 	for (var i = 0; i < colCount; i++){
 		var newcell = row.insertCell(i);
 		newcell.outerHTML = table.rows[1].cells[i].outerHTML;
 	}
 
-	//three important cells: price plan, # employees, total
+	//three important cells for calculation: price plan, # employees, total
 	//var listItems = row.getElementsByTagName("input");
 	//listItems should be of length 3
-	var item = row.getElementsByTagName("td");
-	console.log(item);
-	console.log(item[2].innerText);
+
+	/*var items = row.getElementsByTagName("td");
+	console.log(items);
+	console.log((items[2].id));*/
+
+	var items = row.getElementsByTagName("form");
+	console.log(items);
+
+	/*var items = row.getElementsByClassName("pricing");
+	console.log(items);
+	var prices = items[0];
+	console.log(prices);
+	for (var i = 0; i < prices.length; i++){
+		console.log(prices[i]);
+		prices[i].setAttribute("onchange", "custom.changeApplication()");
+	}*/
+
+	/*var pricePlans = document.getElementsByClassName("pricing");
+	console.log(pricePlans);
+	var prices = pricePlans[0];
+	console.log(prices);
+	for (var i = 0; i < prices.length; i++){
+		console.log(prices[i]);
+		showStyle = prices[i].style;
+		displayStyle = showStyle.display;
+		console.log(displayStyle);
+		if (displayStyle == "inline"){
+			selectedOption = document.getElementById(prices[i].id).value;
+			//selectedOption;
+			break;
+		}
 	
+	}*/
 	/*console.log(listItems)
 	for (i = 0; i < listItems.length; i++){
 		listItems[i].setAttribute("oninput", custom.calculate(row.id));
@@ -293,12 +315,14 @@ custom.addRow = function(tableID){
 
 }
 
+//https://stackoverflow.com/questions/31470273/perform-calculations-on-dynamically-added-rows
 custom.calculate = function(elementID){
 	var mainRow = document.getElementById(elementID);
 	console.log(mainRow);
-	console.log(mainRow.querySelectorAll("pricing"));
-	var box2 = mainRow.querySelectorAll("#numEmp")[0].value;
-	var total = mainRow.querySelectorAll("#total")[0];
+	var box1 = mainRow.querySelectorAll("[id=pricing]")[0].value;
+	console.log(box1);
+	var box2 = mainRow.querySelectorAll("[id=numEmp]")[0].value;
+	var total = mainRow.querySelectorAll("[id=total]")[0];
 	console.log(total);
 	var result = box1 * box2;
 	total.value = result;
