@@ -4,7 +4,8 @@
 		<link rel="stylesheet" href="styles.css">
 		<script src="custom.js"></script>
 	</head>
-	<body onload = "custom.changeApplication('row_0');">
+	<body onload = "custom.changeApplication(row_1);">
+
 	
 	<!--<fieldset>
 		<legend>Zoho</legend>-->
@@ -18,11 +19,12 @@
 				<th>Total</th>
 			</tr>
 			<!--<tr id = "entryRow">-->
-				<tr id = "row_0">
+				<tr id = "row_1">
 				<td>
-		<form>
+		<form onchange ="custom.changeApplication(row_1);">
 			<!--Category:-->
-			<select id="category" onchange ="custom.changeApplication('row_0');">	
+			<select id="category">
+			<!-- onchange ="custom.changeApplication(row_1);">	-->
 				<option id="crm">CRM</option>
 				<option id="forms">Online Forms</option>
 				<option id="sig">Digital Signature</option>
@@ -310,6 +312,12 @@
 		<input type = "button" value = "Add Entry" onClick = "custom.addRow('table')"/>
 		</tr>
 	<!--</fieldset>-->
+
+		<!-- run script once DOM is fully loaded; within <body> instead of onload
+		     update: seems that this is not necessary; id is recognized in js... hmm-->
+		<!--<script>
+			custom.changeApplication(row_1);
+		</script>-->
 	
 </body>
 </html>

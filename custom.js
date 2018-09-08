@@ -49,9 +49,13 @@ custom.rowTotal = function(){
 	}	
 }
 
+//The idea for the next three functions is to apply the change to
+//the row whose id is passed; get rid of specificity of html id
+
 //hides all other applications 
-custom.hideOtherApps = function(str, rowID){
+custom.hideOtherApps = function(str, rowDetails){
 	document.getElementById(str).style.display = "inline";
+
 		var form = document.getElementsByClassName("application");
 		var elements = form[0];
 		for (var i = 0; i < elements.length; i++){
@@ -62,8 +66,9 @@ custom.hideOtherApps = function(str, rowID){
 }
 
 //hides all other prices
-custom.hideOtherPrices = function(str, rowID){
+custom.hideOtherPrices = function(str, rowDetails){
 	document.getElementById(str).style.display = "inline";
+	
 		var form = document.getElementsByClassName("pricing");
 		//console.log(form);
 		var elements = form[0];
@@ -76,13 +81,28 @@ custom.hideOtherPrices = function(str, rowID){
 
 //displays the appropriate application
 //in the respective row
-custom.changeApplication = function(rowID){
-	var row = rowID;
-	console.log(rowID);
-	
+
+//EDIT: hmm why is additional row entry always also displaying first row details...
+//
+custom.changeApplication = function(rowDetails){
+	console.log(rowDetails);
+	rowID = rowDetails.id;
+	var rowIndex = 0;
+	var cellIndex = 1;
+	//console.log(document.getElementById(rowID));
+	var cells = rowDetails.getElementsByTagName("td");
+	console.log(cells);
+		//.rows[rowIndex]));
+		//.cells[cellIndex]));
+	var categ = cells[0];
+	console.log(categ);
+	//console.log(categ.selectedOptions);
+	console.log(categ);
+	//console.log()
 	//console.log((rowCategory).value);
 	//console.log(row);
 	//var category = 
+
 	//old way how to do it based off of raw html form
 	var category = document.getElementById("category").value;
 	//console.log(document.getElementById("category"));
