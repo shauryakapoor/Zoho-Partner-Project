@@ -4,7 +4,8 @@
 		<link rel="stylesheet" href="styles.css">
 		<script src="custom.js"></script>
 	</head>
-	<body onload = "custom.changeApplication('table', 'row_0');">
+	<body onload = "custom.changeApplication(row_1);">
+
 	
 	<!--<fieldset>
 		<legend>Zoho</legend>-->
@@ -18,11 +19,14 @@
 				<th>Total</th>
 			</tr>
 			<!--<tr id = "entryRow">-->
-				<tr id = "row_0">
+				<tr id = "row_1">
 				<td>
-		<form>
+		<!--<form onchange ="custom.changeApplication(row_1);">-->
+			<form>
 			<!--Category:-->
-			<select id="category" onchange ="custom.changeApplication();">	
+			<!-- <select id="category"> -->
+			<!-- onchange ="custom.changeApplication(row_1);">-->
+			<select class = "category" onchange = "custom.changeApplication(row_1);">
 				<option id="crm">CRM</option>
 				<option id="forms">Online Forms</option>
 				<option id="sig">Digital Signature</option>
@@ -57,88 +61,90 @@
 				<td>
 		<form class = "application">
 			<!--Application:-->
-			<select id="appcrm">	
+			<select class = "appcrm">
+			<!-- <select class = "moop" id="appcrm">	-->
 				<option id="zohocrm">Zoho CRM</option>
 			</select>
-			<select id = "appforms">
+			<select class = "appforms">
+			 <!--<select class = "meep" id = "appforms">-->
 				<option id="zohoforms">Zoho Forms</option>
 			</select>
-			<select id = "appsign">
+			<select class = "appsign">
 				<option id="zohosign">Zoho Sign</option>
 			</select>
-			<select id = "appsocial">
+			<select class = "appsocial">
 				<option id="zohosocial">Zoho Social</option>
 			</select>
-			<select id = "appsales">
+			<select class = "appsales">
 				<option id="salesiq">SalesIQ</option>
 			</select>
-			<select id = "appsurvey">
+			<select class = "appsurvey">
 				<option id="zohosurvey">Zoho Survey</option>
 			</select>
-			<select id = "appcampaigns">
+			<select class = "appcampaigns">
 				<option id="zohocampaigns">Zoho Campaigns</option>
 			</select>
-			<select id = "appsites">
+			<select class = "appsites">
 				<option id="zohosites">Zoho Sites</option>
 			</select>
-			<select id = "apppagesense">
+			<select class = "apppagesense">
 				<option id="pagesense">Pagesense</option>
 			</select>
-			<select id = "appbooks">
+			<select class = "appbooks">
 				<option id="zohobooks">Zoho Books</option>
 			</select>
-			<select id = "appinventory">
+			<select class = "appinventory">
 				<option id="zohoinventory">Zoho Inventory</option>
 			</select>
-			<select id = "appinvoice">
+			<select class = "appinvoice">
 				<option id="zohoinvoice">Zoho Invoice</option>
 			</select>
-			<select id = "appsubscription">
+			<select class = "appsubscription">
 				<option id="zohosubscription">Zoho Subscription</option>
 			</select>
-			<select id = "appexpense">
+			<select class = "appexpense">
 				<option id="zohoexpense">Zoho Expense</option>
 			</select>
-			<select id = "appcheckout">
+			<select class = "appcheckout">
 		  		<option id="zohocheckout">Zoho Checkout</option>
 		  	</select>
-		  	<select id = "appbackstage">
+		  	<select class = "appbackstage">
 				<option id="zohobackstage">Zoho Backstage</option>
 			</select>
-			<select id = "appworkplace">
+			<select class = "appworkplace">
 				<option id="workplace">Workplace</option>
 			</select>
-			<select id = "appcliq">
+			<select class = "appcliq">
 				<option id="zohocliq">Zoho Cliq</option>
 			</select>
-			<select id = "appprojects">
+			<select class = "appprojects">
 				<option id="zohoprojects">Zoho Projects</option>
 			</select>
-			<select id = "appbugtracker">
+			<select class = "appbugtracker">
 				<option id="zohobugtracker">Zoho Bugtracker</option>
 			</select>
-			<select id = "appconnect">
+			<select class = "appconnect">
 				<option id="zohoconnect">Zoho Connect</option>
 			</select>
-			<select id = "appmeeting">
+			<select class = "appmeeting">
 				<option id="zohomeeting">Zoho Meeting</option>
 			</select>
-			<select id = "appvault">
+			<select class = "appvault">
 				<option id="zohovault">Zoho Vault</option>
 			</select>
-			<select id = "appnotebook">
+			<select class = "appnotebook">
 				<option id="zohonotebook">Zoho Notebook</option>
 			</select>
-			<select id = "appdesk">
+			<select class = "appdesk">
 				<option id="zohodesk">Zoho Desk</option>
 			</select>
-			<select id = "appassist">
+			<select class = "appassist">
 				<option id="zohoassist">Zoho Assist</option>
 			</select>
-			<select id = "apprecruit">
+			<select class = "apprecruit">
 				<option id="zohorecruit">Zoho Recruit</option>
 			</select>
-			<select id = "appother">
+			<select class = "appother">
 				<option id="applicationother">Other</option>   
 			</select>
 		</form>
@@ -308,8 +314,14 @@
 			</span>
 		</button>-->
 		<input type = "button" value = "Add Entry" onClick = "custom.addRow('table')"/>
-
+		</tr>
 	<!--</fieldset>-->
+
+		<!-- run script once DOM is fully loaded; within <body> instead of onload
+		     update: seems that this is not necessary; id is recognized in js... hmm-->
+		<!--<script>
+			custom.changeApplication(row_1);
+		</script>-->
 	
 </body>
 </html>
