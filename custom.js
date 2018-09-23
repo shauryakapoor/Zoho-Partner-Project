@@ -50,23 +50,52 @@ custom.rowTotal = function(){
 }
 
 //The idea for the next three functions is to apply the change to
-//the row whose id is passed; get rid of specificity of html id
+//the row whose id is passed; get rid of specificity of html id.
+//thus, need to pass in the id, which row we're looking at, 
 
 //hides all other applications 
-custom.hideOtherApps = function(str, rowDetails){
-	document.getElementById(str).style.display = "inline";
+custom.hideOtherApps = function(str, rowApp, rowDetails){
+	/*var x = document.getElementsByClassName("application");
+	console.log(x);
+	var app = x[rowApp];
+	console.log(app);
+	console.log(app.value);*/
 
+	//get the class name from the select and then value
+	var y = document.getElementsByClassName(str);
+	console.log(y);
+	var z = y[rowApp];
+	console.log(rowApp);
+	console.log(z);
+	console.log(z.value);
+	z.style.display = "inline";
+	console.log(z.style.display)
+	//console.log(document.getElementById(str));
+
+	//document.getElementById(str).style.display = "inline";
 		var form = document.getElementsByClassName("application");
-		var elements = form[0];
+		console.log(form);
+		var elements = form[rowApp];
+		console.log(elements);
 		for (var i = 0; i < elements.length; i++){
-			if (elements[i].id != str){
-				document.getElementById(elements[i].id).style.display = "none";
+			if (elements[i].className != str){
+				//document.getElementById(elements[i].className).style.display = "none";
+				console.log(elements[i].className);
+				var temp = document.getElementsByClassName(elements[i].className);
+				console.log(temp);
+				var temp2 = temp[rowApp];
+				console.log(temp2);
+				temp2.style.display = "none";
+				console.log(temp2.style.display);
+				//(elements[i].className).style.display = "none";
 			}
 		}
 }
 
 //hides all other prices
-custom.hideOtherPrices = function(str, rowDetails){
+custom.hideOtherPrices = function(str, rowPrice, rowDetails){
+
+
 	document.getElementById(str).style.display = "inline";
 	
 		var form = document.getElementsByClassName("pricing");
@@ -87,15 +116,17 @@ custom.hideOtherPrices = function(str, rowDetails){
 custom.changeApplication = function(rowDetails){
 	console.log(rowDetails);
 	rowID = rowDetails.id;
-	var rowIndex = 0;
-	var cellIndex = 1;
+	//var rowIndex = 0;
+	//var cellIndex = 1;
 	//console.log(document.getElementById(rowID));
-	var cells = rowDetails.getElementsByTagName("td");
-	console.log(cells);
+
+	//var cells = rowDetails.getElementsByTagName("td");
+	//console.log(cells);
+
 		//.rows[rowIndex]));
 		//.cells[cellIndex]));
-	var categ = cells[0];
-	console.log(categ);
+	//var categ = cells[0];
+	//console.log(categ);
 	//console.log(categ);
 	var x = document.getElementsByClassName("category");
 	console.log(x);
@@ -106,7 +137,8 @@ custom.changeApplication = function(rowDetails){
 	var currentRow = rowID.match(regex)[0];
 	console.log(currentRow);
 	//subtract by 1 to get the correct row
-	var category = x[currentRow - 1].value;
+	var adjust = currentRow - 1;
+	var category = x[adjust].value;
 	console.log(category);
 
 	//https://stackoverflow.com/questions/610336/retrieving-the-text-of-the-selected-option-in-select-element
@@ -129,171 +161,170 @@ custom.changeApplication = function(rowDetails){
 
 	if (category === "CRM"){
 		appstr = "appcrm";
-		custom.hideOtherApps(appstr);
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricecrm";
 		custom.hideOtherPrices(pricestr);
 	}	
 	else if (category === "Online Forms"){
-		str = "appforms";
-		console.log("--- testing ---");
-		custom.hideOtherApps(str);
+		appstr = "appforms";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "priceforms";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Digital Signature"){
-		str = "appsign";
-		custom.hideOtherApps(str);
+		appstr = "appsign";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricesign";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Social Media Management"){
-		str = "appsocial";
-		custom.hideOtherApps(str);
+		appstr = "appsocial";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricesocial";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Website Engagement Monitoring"){
-		str = "appsales";
-		custom.hideOtherApps(str);
+		appstr = "appsales";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricesales";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Survey"){
-		str = "appsurvey";
-		custom.hideOtherApps(str);
+		appstr = "appsurvey";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricesurvey";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Email Marketing"){
-		str = "appcampaigns";
-		custom.hideOtherApps(str);
+		appstr = "appcampaigns";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricecampaigns";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Website Builder"){
-		str = "appsites";
-		custom.hideOtherApps(str);
+		appstr = "appsites";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricesites";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Website Optimization"){
-		str = "apppagesense";
-		custom.hideOtherApps(str);
+		appstr = "apppagesense";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricepagesense";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Accounting Software"){
-		str = "appbooks";
-		custom.hideOtherApps(str);
+		appstr = "appbooks";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricebooks";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Inventory Management"){
-		str = "appinventory";
-		custom.hideOtherApps(str);
+		appstr = "appinventory";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "priceinventory";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Invoicing Software"){
-		str = "appinvoice";
-		custom.hideOtherApps(str);
+		appstr = "appinvoice";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "priceinvoice";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Subscription Management"){
-		str = "appsubscription";
-		custom.hideOtherApps(str);
+		appstr = "appsubscription";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricesub";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Expense Management"){
-		str = "appexpense";
-		custom.hideOtherApps(str);
+		appstr = "appexpense";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "priceexpense";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Payment Gateway"){
-		str = "appcheckout";
-		custom.hideOtherApps(str);
+		appstr = "appcheckout";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricecheckout";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Event Management"){
-		str = "appbackstage";
-		custom.hideOtherApps(str);
+		appstr = "appbackstage";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricebackstage";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Email Hosting"){
-		str = "appworkplace";
-		custom.hideOtherApps(str);
+		appstr = "appworkplace";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricework";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Chat"){
-		str = "appcliq";
-		custom.hideOtherApps(str);
+		appstr = "appcliq";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricecliq";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Project Management"){
-		str = "appprojects";
-		custom.hideOtherApps(str);
+		appstr = "appprojects";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "priceprojects";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Bug Tracking Software"){
-		str = "appbugtracker";
-		custom.hideOtherApps(str);
+		appstr = "appbugtracker";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricebugtracker";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Internal Social Network"){
-		str = "appconnect";
-		custom.hideOtherApps(str);
+		appstr = "appconnect";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "priceconnect";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Webinar Software"){
-		str = "appmeeting";
-		custom.hideOtherApps(str);
+		appstr = "appmeeting";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricemeeting";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Password Management"){
-		str = "appvault";
-		custom.hideOtherApps(str);
+		appstr = "appvault";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricevault";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Note Taking"){
-		str = "appnotebook";
-		custom.hideOtherApps(str);
+		appstr = "appnotebook";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricenotebook";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Helpdesk Software"){
-		str = "appdesk";
-		custom.hideOtherApps(str);
+		appstr = "appdesk";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricedesk";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Remote Support and Access"){
-		str = "appassist";
-		custom.hideOtherApps(str);
+		appstr = "appassist";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "priceassist";
 		custom.hideOtherPrices(pricestr);
 	}
 	else if (category === "Recruitment Software"){
-		str = "apprecruit";
-		custom.hideOtherApps(str);
+		appstr = "apprecruit";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "pricerecruit";
 		custom.hideOtherPrices(pricestr);
 	}
 	//"Other" category; in case developer wants to add more fields
 	else{
-		str = "appother";
-		custom.hideOtherApps(str);
+		appstr = "appother";
+		custom.hideOtherApps(appstr, adjust, rowDetails);
 		pricestr = "priceother";
 		custom.hideOtherPrices(pricestr);
 	}
