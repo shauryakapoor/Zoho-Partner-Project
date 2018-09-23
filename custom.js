@@ -82,8 +82,8 @@ custom.hideOtherPrices = function(str, rowDetails){
 //displays the appropriate application
 //in the respective row
 
-//EDIT: hmm why is additional row entry always also displaying first row details...
-//
+//use .value for form elements; innerHTML otherwise
+//two of the same unique ID is invalid HTML
 custom.changeApplication = function(rowDetails){
 	console.log(rowDetails);
 	rowID = rowDetails.id;
@@ -96,15 +96,35 @@ custom.changeApplication = function(rowDetails){
 		//.cells[cellIndex]));
 	var categ = cells[0];
 	console.log(categ);
-	//console.log(categ.selectedOptions);
-	console.log(categ);
+	//console.log(categ);
+	var x = document.getElementsByClassName("category");
+	console.log(x);
+
+	//use regex
+	var regex = /\d+/g;
+	//is returned in the form of an array, so use [0]
+	var currentRow = rowID.match(regex)[0];
+	console.log(currentRow);
+	//subtract by 1 to get the correct row
+	var category = x[currentRow - 1].value;
+	console.log(category);
+
+	//https://stackoverflow.com/questions/610336/retrieving-the-text-of-the-selected-option-in-select-element
+	//var test = document.getElementById('category').options[document.getElementById('category').selectedIndex].text;
+	//console.log(test);
+	//console.log(document.getElementById('category').options);
+
+	//console.log(document.getElementById('category').selectedIndex);
 	//console.log()
 	//console.log((rowCategory).value);
 	//console.log(row);
 	//var category = 
 
+
+
 	//old way how to do it based off of raw html form
-	var category = document.getElementById("category").value;
+	//var category = document.getElementById("category").value;
+	//console.log(category);
 	//console.log(document.getElementById("category"));
 
 	if (category === "CRM"){

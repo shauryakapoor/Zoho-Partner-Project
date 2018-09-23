@@ -21,10 +21,12 @@
 			<!--<tr id = "entryRow">-->
 				<tr id = "row_1">
 				<td>
-		<form onchange ="custom.changeApplication(row_1);">
+		<!--<form onchange ="custom.changeApplication(row_1);">-->
+			<form>
 			<!--Category:-->
-			<select id="category">
-			<!-- onchange ="custom.changeApplication(row_1);">	-->
+			<!-- <select id="category"> -->
+			<!-- onchange ="custom.changeApplication(row_1);">-->
+			<select class = "category" onchange = "custom.changeApplication(row_1);">
 				<option id="crm">CRM</option>
 				<option id="forms">Online Forms</option>
 				<option id="sig">Digital Signature</option>
